@@ -1,0 +1,52 @@
+/*
+ * Login: xborozv00
+ *
+ * Doplnte sve reseni.
+ *
+ * Nezapomente pridat strucne hromadne komentare pro pravidla jednotlivych sekci
+ * a pro netrivialni useky kodu.
+ *
+ * Snazte se dodat aspon castecne reseni, i snaha se hodnoti.
+ */
+
+#header {
+  width: 100%;
+}
+#header-title {
+  background-position: center;
+  width: 100%;
+  position: relative;
+  background: radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(0, 0, 0, 1) 80%
+    ),
+    url("../img/bg-header.png") no-repeat center / contain black;
+  background-position: center center;
+  height: 800px;
+  font-family: Spectral;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+#header-title span:nth-child(1) {
+  visibility: hidden;
+}
+
+#header-title span:nth-child(2) {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+#header-title span:nth-child(3) {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+#header-title span:nth-child(4) {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
