@@ -21,14 +21,14 @@ body {
   background: radial-gradient(
       circle at center,
       rgba(0, 0, 0, 0) 30%,
-      rgba(0, 0, 0, 1) 80%
+      rgba(0, 0, 0, 1) 60%
     ),
     url("../img/bg-header.png") no-repeat center / contain black;
   background-position: center center;
   height: 800px;
   font-family: Spectral;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 #header-title span:nth-child(1) {
@@ -38,30 +38,30 @@ body {
 #header-title span:nth-child(2) {
   position: absolute;
   top: 10px;
-  left: 20px;
+  left: 200px;
 }
 
 #header-title span:nth-child(3) {
   position: absolute;
   top: 10px;
-  right: 20px;
+  right: 200px;
 }
 
 #header-title span:nth-child(4) {
   position: absolute;
   bottom: 20px;
-  right: 20px;
+  right: 400px;
 }
 
-/* Фиксируем меню в левой части экрана */
 #header-menu {
-  position: fixed; /* «прилипает» к экрану при прокрутке */
-  top: 0; /* прижать к верхней границе */
-  left: 0; /* прижать к левой границе */
-  width: 100px; /* ширина меню */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
   opacity: 50%;
-  background-color: black; /* тёмный фон (пример) */
-  z-index: 999; /* чтобы меню было поверх контента */
+  background-color: black;
+  z-index: 999;
+  margin-top: 15%;
 }
 
 /* Стилизация списка */
