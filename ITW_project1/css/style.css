@@ -9,8 +9,10 @@
  * Snazte se dodat aspon castecne reseni, i snaha se hodnoti.
  */
 
-#header {
-  width: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 #header-title {
   background-position: center;
@@ -49,4 +51,38 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
+
+/* Фиксируем меню в левой части экрана */
+#header-menu {
+  position: fixed; /* «прилипает» к экрану при прокрутке */
+  top: 0; /* прижать к верхней границе */
+  left: 0; /* прижать к левой границе */
+  width: 100px; /* ширина меню */
+  opacity: 50%;
+  background-color: black; /* тёмный фон (пример) */
+  z-index: 999; /* чтобы меню было поверх контента */
+}
+
+/* Стилизация списка */
+#header-menu ul {
+  list-style: none; /* убираем маркеры */
+  margin: 0;
+  padding: 1rem; /* отступ внутри */
+}
+
+/* Отступы между пунктами */
+#header-menu li {
+  margin-bottom: 1rem;
+}
+
+/* Ссылки в меню */
+#header-menu a {
+  color: #fff; /* белый текст */
+  text-decoration: none; /* без подчеркивания */
+  font-weight: 500; /* полужирный (пример) */
+}
+
+#header-menu a:hover {
+  color: #ccc; /* светлее при наведении */
 }
