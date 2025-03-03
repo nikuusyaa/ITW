@@ -13,6 +13,11 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: #fffef0;
+  font-family: Spectral;
+}
+header {
+  width: 100%;
 }
 #header-title {
   background-position: center;
@@ -25,8 +30,7 @@ body {
     ),
     url("../img/bg-header.png") no-repeat center / contain black;
   background-position: center center;
-  height: 800px;
-  font-family: Spectral;
+  height: 100vh;
   color: #fff;
   font-size: 2rem;
 }
@@ -64,25 +68,142 @@ body {
   margin-top: 15%;
 }
 
-/* Стилизация списка */
 #header-menu ul {
-  list-style: none; /* убираем маркеры */
+  list-style: none;
   margin: 0;
-  padding: 1rem; /* отступ внутри */
+  padding: 1rem;
 }
 
-/* Отступы между пунктами */
 #header-menu li {
   margin-bottom: 1rem;
 }
 
-/* Ссылки в меню */
 #header-menu a {
-  color: #fff; /* белый текст */
-  text-decoration: none; /* без подчеркивания */
-  font-weight: 500; /* полужирный (пример) */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 #header-menu a:hover {
-  color: #ccc; /* светлее при наведении */
+  color: #ccc;
+}
+
+section#home {
+  height: 100vh;
+  margin: auto;
+  width: 100%;
+  background-color: #fffef0;
+  padding: 30px;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  box-shadow: 0 0 20px black, inset 0px 0px 90px #a47c50;
+}
+.heading {
+  text-align: center;
+}
+.heading h2 {
+  color: #000280;
+  margin-bottom: 0;
+  font-family: IM Fell DW Pica;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
+}
+.heading h2::after {
+  content: "";
+  display: block;
+  width: 170px;
+  height: 20px;
+  background-image: url("../img/ornament.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.4));
+  opacity: 0.7;
+}
+
+.heading span {
+  font-size: 12px;
+  display: block;
+  color: #666;
+  opacity: 0.6;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.section-content p:nth-of-type(2) {
+  order: 1;
+}
+
+.video-player {
+  position: relative;
+  width: 75%; 
+  margin: 0 auto; 
+}
+
+.video-content video {
+  width: 100%;
+  height: auto; 
+  filter: sepia(0.9) contrast(1) brightness(0.8);
+  display: block;
+}
+
+.video-controls .playpause {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  color: transparent;
+  text-indent: -9999px;
+  overflow: hidden;
+  outline: none;
+}
+
+.video-controls .playpause {
+
+  clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+}
+
+
+.video-controls .playpause {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+  text-indent: -9999px;
+  color: transparent;
+  overflow: hidden;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+
+  width: 0;
+  height: 0;
+  border-left: 30px solid #000280; 
+  opacity: 0.6;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+.video-player .playpause {
+  display: none;
+}
+
+/* show triangle when video is paused */
+.video-player[data-state="paused"] .playpause {
+  display: block;
 }
