@@ -1,0 +1,213 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+#head {
+  background-color: #3c1f0a;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+#head h1 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-style: italic;
+  padding-left: 150px;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+#head h1 a {
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+}
+
+#subtitle {
+  display: block;
+  color: #d5a17c;
+  font-size: large;
+  font-weight: 200;
+}
+
+#list1 {
+  padding-left: 150px;
+  font-size: small;
+}
+
+#head ul {
+  list-style: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 9px;
+  display: flex;
+  gap: 15px;
+}
+
+#head ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 0;
+  position: relative;
+}
+
+#head ul li a:hover {
+  color: #d5a17c;
+}
+
+#head ul li a:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 30%;
+  bottom: -15px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #d5a17c;
+}
+
+h2 {
+  color: #b15e23;
+  margin: 20px 0 10px 0;
+  font-size: 15px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 30px;
+}
+
+#prednasky {
+  margin-left: 80px;
+}
+#lectures {
+  margin: 0;
+  margin-top: 30px;
+}
+#prednasky a {
+  display: inline-block;
+  width: 700px;
+  color: black;
+  font-weight: bold;
+  border-bottom: 2px dotted #d5a17c;
+}
+
+#prednasky p {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+#vysledky table {
+  margin-left: 80px;
+}
+p {
+  justify-content: center;
+  margin-left: 80px;
+  margin-right: 80px;
+  line-height: 1.5;
+  color: #656565;
+}
+
+table {
+  margin: 20px 0;
+  width: 80%;
+  border: 5px solid #000;
+}
+
+th {
+  border: 3px dotted #b15e23;
+}
+
+td {
+  border-bottom: 3px solid black;
+}
+
+th,
+td {
+  text-align: center;
+}
+thead th {
+  background-color: #d5a17c;
+  color: #000;
+}
+
+#cviceni {
+  margin-left: 80px;
+  font-size: 15px;
+  font-weight: bold;
+}
+#cviceni p {
+  display: block;
+  width: 700px;
+  font-size: 12px;
+  font-weight: 100;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px dotted #d5a17c;
+}
+
+#kontakt {
+  margin-left: 80px;
+  background-color: #3c1f0a;
+  color: white;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  width: 80%;
+}
+#us {
+  color: white;
+  margin: 0;
+  padding-top: 10px;
+}
+
+dl {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+dt {
+  float: left;
+  width: 120px;
+  font-size: 12px;
+  clear: left; /*every dt starts with new line*/
+  margin: 0;
+  padding: 5px 0;
+}
+
+dd {
+  font-size: 12px;
+  margin: 0 0 10px 0;
+  padding: 5px 0;
+}
+
+#subjects {
+  color: white;
+  margin: 0;
+}
+
+h2#subjects + ul {
+  list-style: none;
+  padding: 0;
+}
+
+h2#subjects + ul li::before {
+  content: "\2713";
+  color: #d5a17c;
+  margin-right: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #d5a17c;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
