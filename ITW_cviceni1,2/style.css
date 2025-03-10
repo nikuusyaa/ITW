@@ -75,9 +75,32 @@ h2 {
   color: #b15e23;
   margin: 20px 0 10px 0;
   font-size: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 30px;
+}
+
+#ITW {
+  margin-top: 0;
+}
+#about {
+  background-image: linear-gradient(white, #e5e5e5);
+  padding: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+}
+.new {
+  display: flex;
+}
+
+#allLectures {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
   margin-left: 80px;
-  margin-right: 80px;
-  margin-top: 30px;
+  margin-right: 0px;
 }
 
 #prednasky {
@@ -85,10 +108,9 @@ h2 {
 }
 #lectures {
   margin: 0;
-  margin-top: 30px;
+  font-size: 18px;
 }
 #prednasky a {
-  display: inline-block;
   width: 700px;
   color: black;
   font-weight: bold;
@@ -136,44 +158,52 @@ thead th {
 }
 
 #cviceni {
-  margin-left: 80px;
+  margin-top: 5px;
+  background-color: #f1f1f1;
+  padding-top: 35px;
+  padding-right: 200px;
+  padding-left: 10px;
   font-size: 15px;
   font-weight: bold;
 }
+.news {
+  display: grid;
+  /* Левая колонка фиксированной ширины 150px, правая — занимает остаток */
+  grid-template-columns: 60px 1fr;
+  gap: 0;
+  border-bottom: 2px dotted #d5a17c;
+  align-items: center;
+}
 #cviceni p {
-  display: block;
-  width: 700px;
   font-size: 12px;
   font-weight: 100;
   margin: 0;
   margin-top: 10px;
   margin-bottom: 20px;
-  border-bottom: 2px dotted #d5a17c;
 }
 
 #kontakt {
-  margin-left: 80px;
   background-color: #3c1f0a;
   color: white;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  width: 80%;
+  padding-bottom: 30px;
+  width: 94, 5%;
 }
 #us {
   color: white;
   margin: 0;
-  padding-top: 10px;
+  padding: 0;
+  padding-top: 20px;
 }
-
 dl {
+  display: flex;
+  flex-wrap: wrap;
   margin: 10px 0;
   font-size: 15px;
 }
 
 dt {
   float: left;
-  width: 120px;
+  width: 70px;
   font-size: 12px;
   clear: left; /*every dt starts with new line*/
   margin: 0;
@@ -189,6 +219,8 @@ dd {
 #subjects {
   color: white;
   margin: 0;
+  padding: 0;
+  padding-top: 10px;
 }
 
 h2#subjects + ul {
@@ -210,4 +242,13 @@ a {
 a:hover {
   color: white;
   text-decoration: underline;
+}
+
+#table {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 230px 1fr;
+  grid-gap: 5px;
+  padding-left: 200px;
+  padding-right: 200px;
 }
