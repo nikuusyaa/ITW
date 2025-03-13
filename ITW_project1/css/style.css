@@ -141,9 +141,14 @@ section#home {
 }
 
 .video-player {
+  display: flex;
   position: relative;
+  overflow: hidden;
+  width: 70%;
   max-width: 768px;
+  max-height: 432px;
   margin: 0 auto;
+  z-index: 2;
 }
 
 .video-content {
@@ -161,13 +166,12 @@ section#home {
 .video-controls {
   position: absolute;
   bottom: 7.5px;
+  z-index: 2;
   left: 0;
   right: 0;
-  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 }
 
 .time {
@@ -189,6 +193,8 @@ section#home {
   background: rgba(255, 255, 255, 0.4);
   border-radius: 5px;
   opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
 }
 
 progress::-webkit-progress-value {
@@ -200,13 +206,14 @@ progress::-webkit-progress-value {
 .fullscreen {
   border: none;
   background: none;
+  font-size: 0;
 }
 
 .video-player[data-state="paused"] .playpause::before {
   content: "\f04b";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  font-size: 25px;
+  font-size: 21.2px;
   text-shadow: 0px 0px 8px #ffffff;
 }
 
@@ -215,7 +222,24 @@ progress::-webkit-progress-value {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   font-size: 25px;
-  text-shadow: 0px 0px 4px #ffffff;
+  text-shadow: 0px 0px 8px #ffffff;
+}
+
+.video-player[data-mute="muted"] .mute::before {
+  content: "\f6a9";
+  font-family: "Font Awesome 6 Free";
+  color: rgb(105, 103, 103);
+  font-weight: 900;
+  font-size: 25px;
+  text-shadow: 0px 0px 8px #ffffff;
+}
+
+.video-player[data-mute="unmuted"] .mute::before {
+  content: "\f028";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 22.3px;
+  text-shadow: 0px 0px 8px #ffffff;
 }
 
 button::before {
