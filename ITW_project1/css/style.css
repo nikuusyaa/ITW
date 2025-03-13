@@ -165,13 +165,13 @@ section#home {
 
 .video-controls {
   position: absolute;
-  bottom: 7.5px;
+  bottom: 0;
   z-index: 2;
   left: 0;
   right: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
 .time {
@@ -180,6 +180,7 @@ section#home {
   font-size: 20px;
   text-shadow: 0px 0px 4px #ffffff;
   cursor: pointer;
+  padding-bottom: 10px;
 }
 
 .progress {
@@ -187,7 +188,7 @@ section#home {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 4px;
   width: 100%;
   height: 10px;
   background: rgba(255, 255, 255, 0.4);
@@ -207,13 +208,14 @@ progress::-webkit-progress-value {
   border: none;
   background: none;
   font-size: 0;
+  padding-bottom: 14px;
 }
 
 .video-player[data-state="paused"] .playpause::before {
   content: "\f04b";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  font-size: 21.2px;
+  font-size: 18.2px;
   text-shadow: 0px 0px 8px #ffffff;
 }
 
@@ -221,7 +223,7 @@ progress::-webkit-progress-value {
   content: "\f04c";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  font-size: 25px;
+  font-size: 22px;
   text-shadow: 0px 0px 8px #ffffff;
 }
 
@@ -230,7 +232,7 @@ progress::-webkit-progress-value {
   font-family: "Font Awesome 6 Free";
   color: rgb(105, 103, 103);
   font-weight: 900;
-  font-size: 25px;
+  font-size: 21.4px;
   text-shadow: 0px 0px 8px #ffffff;
 }
 
@@ -238,7 +240,7 @@ progress::-webkit-progress-value {
   content: "\f028";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  font-size: 22.3px;
+  font-size: 19.3px;
   text-shadow: 0px 0px 8px #ffffff;
 }
 
