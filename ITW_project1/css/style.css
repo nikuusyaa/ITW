@@ -172,13 +172,21 @@ section#home {
   display: flex;
   align-items: center;
   justify-content: left;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.video-player:hover .video-controls {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .time {
   grid-column: 3 / span 1;
-  color: #000280;
+  color: #060757cd;
   font-size: 20px;
-  text-shadow: 0px 0px 4px #ffffff;
+  text-shadow: 0px 0px 8px #ffffff;
   cursor: pointer;
   padding-bottom: 10px;
 }
@@ -195,11 +203,20 @@ section#home {
   border-radius: 5px;
   opacity: 0.6;
   z-index: 1;
-  pointer-events: none;
 }
 
 progress::-webkit-progress-value {
   background-color: #000280;
+}
+
+.playpause,
+.mute,
+.time {
+  order: 1;
+}
+
+.fullscreen {
+  order: 2;
 }
 
 .playpause,
@@ -247,4 +264,17 @@ progress::-webkit-progress-value {
 button::before {
   font-size: 16px;
   color: #04053e;
+}
+
+.fullscreen {
+  margin-left: auto; /* «отталкиваем» вправо */
+}
+.video-player .fullscreen::before {
+  content: "\f065";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  text-shadow: 0px 0px 8px #ffffff;
 }
