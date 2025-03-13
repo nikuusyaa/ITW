@@ -89,18 +89,23 @@ header {
 }
 
 section#home {
-  height: 100vh;
+  height: 95vh;
   margin: auto;
-  width: 100%;
+  max-width: 1000px;
   background-color: #fffef0;
   padding: 30px;
   margin-top: 10rem;
   margin-bottom: 10rem;
   box-shadow: 0 0 20px black, inset 0px 0px 90px #a47c50;
+  position: relative;
 }
+
 .heading {
   text-align: center;
+  padding-top: 15px;
+  padding-bottom: 5px;
 }
+
 .heading h2 {
   color: #000280;
   margin-bottom: 0;
@@ -144,9 +149,9 @@ section#home {
   display: flex;
   position: relative;
   overflow: hidden;
-  width: 70%;
+  width: 90%;
   max-width: 768px;
-  max-height: 432px;
+  max-height: 500px;
   margin: 0 auto;
   z-index: 2;
 }
