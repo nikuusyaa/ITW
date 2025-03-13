@@ -142,68 +142,38 @@ section#home {
 
 .video-player {
   position: relative;
-  width: 75%; 
-  margin: 0 auto; 
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.video-content {
+  position: relative;
+  width: 100%;
+  padding-top: 0;
 }
 
 .video-content video {
   width: 100%;
-  height: auto; 
-  filter: sepia(0.9) contrast(1) brightness(0.8);
-  display: block;
+  height: 100%;
+  object-fit: contain;
 }
 
-.video-controls .playpause {
+.video-controls {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 
-  width: 40px;
-  height: 40px;
-  border: none;
-  background: none;
+.time {
+  grid-column: 3 / span 1;
+  color: #000280;
+  font-size: 20px;
+  text-shadow: 0px 0px 4px #ffffff;
   cursor: pointer;
-
-  color: transparent;
-  text-indent: -9999px;
-  overflow: hidden;
-  outline: none;
-}
-
-.video-controls .playpause {
-
-  clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
-}
-
-
-.video-controls .playpause {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-
-  text-indent: -9999px;
-  color: transparent;
-  overflow: hidden;
-  border: none;
-  background: none;
-  cursor: pointer;
-
-
-  width: 0;
-  height: 0;
-  border-left: 30px solid #000280; 
-  opacity: 0.6;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-}
-.video-player .playpause {
-  display: none;
-}
-
-/* show triangle when video is paused */
-.video-player[data-state="paused"] .playpause {
-  display: block;
 }
