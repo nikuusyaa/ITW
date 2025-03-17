@@ -89,13 +89,13 @@ header {
 }
 
 section {
-  height: 95vh;
+  height: 100%;
   margin: auto;
-  max-width: 1000px;
+  max-width: 1050px;
   background-color: #fffef0;
   margin-top: 10rem;
   margin-bottom: 10rem;
-  box-shadow: 0 0 20px black, inset 0px 0px 90px #a47c50;
+  box-shadow: 0 0 20px black, inset 0px 0px 90px #9a5d1c;
   position: relative;
 }
 
@@ -118,7 +118,7 @@ section {
 
 #home::after {
   bottom: 0px;
-  right: -220px;
+  right: -235px;
   background-position: -500px 300px;
 }
 
@@ -142,27 +142,29 @@ section {
 }
 
 .heading h2 {
+  margin-top: 50px;
   color: #000280;
   margin-bottom: 0;
   font-family: IM Fell DW Pica;
-  font-weight: normal;
+  font-weight: bold;
   letter-spacing: 0.2rem;
+  font-size: 2rem;
 }
 .heading h2::after {
   content: "";
   display: block;
-  width: 170px;
-  height: 20px;
+  width: 225px;
+  height: 40px;
   background-image: url("../img/ornament.svg");
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0 auto;
-  filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.7));
   opacity: 0.7;
 }
 
 .heading span {
-  font-size: 12px;
+  font-size: 14px;
   display: block;
   color: #666;
   opacity: 0.6;
@@ -364,4 +366,51 @@ button::before {
   bottom: 65px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+#products .section-content {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#products img {
+  padding-top: 20px;
+  display: block;
+  width: 70px;
+  height: 320px;
+  min-width: 220px;
+  filter: grayscale(100%) sepia(65%) brightness(120%) contrast(110%) blur(1.1px);
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+#products .section-item {
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#products .section-item p {
+  display: none;
+}
+
+#products .section-item h3 {
+  min-height: 100px;
+  background-color: #fffef0;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: IM Fell DW Pica;
+  font-weight: bold;
+  opacity: 0.6;
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(128, 128, 128, 0.2);
+  border-top: none;
+  margin-bottom: 50px;
 }
