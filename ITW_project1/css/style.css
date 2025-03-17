@@ -444,7 +444,6 @@ button::before {
   grid-column: 1;
   grid-row: 1 / span 3;
   width: 90%;
-  margin: 20px 0 0 20px;
   opacity: 0.8;
   transition: opacity 0.3s ease-in-out;
 }
@@ -454,22 +453,24 @@ button::before {
   width: 100%;
   max-width: 1199px;
   margin: 0 auto;
-  padding-bottom: 160px;
 }
 
 #services .section-item:hover img {
   opacity: 1;
 }
 
-#services .section-item:nth-child(1),
-#services .section-item:nth-child(3),
-#services .section-item:nth-child(2) {
+#services .section-item {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto;
   column-gap: 0rem;
-  align-items: start;
-  border-bottom: 2px dotted black;
+  margin-left: 70px;
+  margin-right: 70px;
+  padding-top: 10px;
+}
+#services .section-item:nth-child(1),
+#services .section-item:nth-child(2) {
+  border-bottom: 1.5px dotted #9a5d1c;
 }
 
 #services .section-item:nth-child(1) img,
@@ -477,24 +478,14 @@ button::before {
   grid-column: 1;
 }
 
-#services .section-item:nth-child(1) h3,
-#services .section-item:nth-child(2) h3,
-#services .section-item:nth-child(2) h3 {
+#services .section-item h3 {
   grid-column: 2;
   grid-row: 1;
   margin: 0;
-  margin-top: 20px;
 }
 
-#services .section-item:nth-child(1) .service-props,
-#services .section-item:nth-child(3) .service-props,
-#services .section-item:nth-child(3) .service-props {
-  grid-column: 2;
+#services .section-item .service-props {
   grid-row: 2;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
 }
 
 #services .section-item:nth-child(1) p,
@@ -516,4 +507,48 @@ button::before {
 #services .section-item:nth-child(2) .service-props,
 #services .section-item:nth-child(2) p {
   grid-column: 1;
+}
+
+.price::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f154";
+  font-weight: 900;
+  margin-right: 0.3em;
+}
+
+#services .price,
+h3 {
+  font-family: IM Fell DW Pica;
+}
+
+#services p {
+  font-size: 16px;
+}
+
+#services ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: left;
+  gap: 7px;
+  flex-direction: row;
+  margin: 0;
+}
+
+/* Styles for links within reference list items */
+#services li a {
+  text-decoration: none;
+  color: black;
+  font-size: 0;
+  display: inline-block;
+}
+
+/* Styles for stars using FontAwesome */
+#services li a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f02d";
+  font-weight: 900;
+  font-size: 20px;
+  display: inline-block;
+  transition: filter 0.3s;
+  filter: none;
 }
