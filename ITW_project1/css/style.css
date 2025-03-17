@@ -93,11 +93,46 @@ section#home {
   margin: auto;
   max-width: 1000px;
   background-color: #fffef0;
-  padding: 30px;
   margin-top: 10rem;
   margin-bottom: 10rem;
   box-shadow: 0 0 20px black, inset 0px 0px 90px #a47c50;
   position: relative;
+}
+
+#home::before,
+#home::after {
+  content: "";
+  position: absolute;
+  background: url("../img/wine.png") no-repeat center center;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  opacity: 0.2;
+}
+
+#home::before {
+  top: 120px;
+  left: 20px;
+  background-position: -500px -250px;
+}
+
+#home::after {
+  bottom: 0px;
+  right: -220px;
+  background-position: -500px 300px;
+}
+
+#about::after {
+  content: "";
+  position: absolute;
+  width: 166px;
+  height: 300px;
+  background: url("../img/wine.png") -970px 300px;
+  background-size: cover;
+  transform: rotate(-45deg) scale(1.1);
+  bottom: 50px;
+  left: 100px;
+  z-index: 1;
 }
 
 .heading {
