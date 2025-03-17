@@ -221,7 +221,7 @@ section {
   justify-content: left;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -369,7 +369,7 @@ button::before {
 
 #products {
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 #products .section-content {
@@ -389,6 +389,12 @@ button::before {
   filter: grayscale(100%) sepia(65%) brightness(120%) contrast(110%) blur(1.1px);
   object-fit: cover;
   opacity: 0.7;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#products img:hover {
+  opacity: 1;
+  filter: none;
 }
 
 #products .section-item {
@@ -432,4 +438,82 @@ button::before {
   top: -80px;
   left: -50px;
   background-position: -240px -250px;
+}
+
+#services .section-item img {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  width: 90%;
+  margin: 20px 0 0 20px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#services .section-content {
+  position: relative;
+  width: 100%;
+  max-width: 1199px;
+  margin: 0 auto;
+  padding-bottom: 160px;
+}
+
+#services .section-item:hover img {
+  opacity: 1;
+}
+
+#services .section-item:nth-child(1),
+#services .section-item:nth-child(3),
+#services .section-item:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto auto;
+  column-gap: 0rem;
+  align-items: start;
+  border-bottom: 2px dotted black;
+}
+
+#services .section-item:nth-child(1) img,
+#services .section-item:nth-child(3) img {
+  grid-column: 1;
+}
+
+#services .section-item:nth-child(1) h3,
+#services .section-item:nth-child(2) h3,
+#services .section-item:nth-child(2) h3 {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  margin-top: 20px;
+}
+
+#services .section-item:nth-child(1) .service-props,
+#services .section-item:nth-child(3) .service-props,
+#services .section-item:nth-child(3) .service-props {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#services .section-item:nth-child(1) p,
+#services .section-item:nth-child(3) p {
+  grid-column: 2;
+  grid-row: 3;
+  margin: 0;
+}
+
+#services .section-item:nth-child(2) {
+  grid-template-columns: 2fr 1fr;
+}
+
+#services .section-item:nth-child(2) img {
+  grid-column: 2;
+}
+
+#services .section-item:nth-child(2) h3,
+#services .section-item:nth-child(2) .service-props,
+#services .section-item:nth-child(2) p {
+  grid-column: 1;
 }
