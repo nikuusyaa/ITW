@@ -442,7 +442,7 @@ button::before {
 
 #services .section-item img {
   grid-column: 1;
-  grid-row: 1 / span 3;
+  grid-row: 1 / span 4;
   width: 90%;
   opacity: 0.8;
   transition: opacity 0.3s ease-in-out;
@@ -462,7 +462,6 @@ button::before {
 #services .section-item {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto auto;
   column-gap: 0rem;
   margin-left: 70px;
   margin-right: 70px;
@@ -478,21 +477,14 @@ button::before {
   grid-column: 1;
 }
 
-#services .section-item h3 {
+#services .section-item:nth-child(1) p .references,
+#services .section-item:nth-child(3) p .references {
   grid-column: 2;
-  grid-row: 1;
-  margin: 0;
 }
 
-#services .section-item .service-props {
-  grid-row: 2;
-}
-
-#services .section-item:nth-child(1) p,
-#services .section-item:nth-child(3) p {
-  grid-column: 2;
-  grid-row: 3;
-  margin: 0;
+#services .section-item:nth-child(1) p .service-props,
+#services .section-item:nth-child(3) p .service-props {
+  grid-column: 1;
 }
 
 #services .section-item:nth-child(2) {
