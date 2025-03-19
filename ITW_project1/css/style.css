@@ -552,20 +552,20 @@ h3 {
   width: 120%;
 }
 
+#events .section-content > :nth-child(2n) {
+  margin-top: 100px;
+}
+
 #events .section-content {
   position: relative;
-  overflow: hidden;
-  padding-right: 50px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  max-width: 800px; /* или другая подходящая ширина */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 90px;
-}
-
-#events .section-content > :nth-child(2n) {
-  margin-top: 100px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 #events .section-content::after {
@@ -573,9 +573,9 @@ h3 {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: calc(50% - 1px); /* центрируем линию */
-  width: 2px; /* толщина линии */
-  background-color: #8a6f54; /* цвет линии */
+  left: calc(50% - 1px);
+  width: 2px;
+  background-color: #8a6f54;
+  margin-bottom: 30px;
   margin-top: 10px;
-  margin-bottom: 50px;
 }
