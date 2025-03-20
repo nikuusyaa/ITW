@@ -11,20 +11,13 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
   background-color: #fffef0;
   font-family: Spectral;
   width: 100vw;
-  align-items: center; /* Центрируем содержимое по горизонтали */
-  justify-content: center;
-  max-width: 100vw;
   overflow-x: hidden;
+  margin: 0;
 }
 
-header {
-  width: 100vw;
-}
 #header-title {
   background-position: center;
   width: 100vw;
@@ -35,7 +28,6 @@ header {
       rgba(0, 0, 0, 1) 60%
     ),
     url("../img/bg-header.png") no-repeat center / contain black;
-  background-position: center center;
   height: 100vh;
   color: #fff;
   font-size: 2rem;
@@ -413,7 +405,8 @@ button::before {
   object-fit: cover;
 }
 
-#products img:hover {
+#products img:hover,
+#events img:hover {
   opacity: 1;
   filter: none;
 }
@@ -573,20 +566,14 @@ h3 {
   transition: opacity 0.5s ease-in-out;
 }
 
-#events img:hover {
-  opacity: 1;
-  filter: none;
-}
-
 #events .section-content > :nth-child(2n) {
   margin-top: 100px;
 }
 
 #events .section-content {
   position: relative;
-  width: 90%;
+  width: 80%;
   display: grid;
-  max-width: 800px;
   margin: 0 auto;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 10%;
@@ -611,8 +598,7 @@ h3 {
   position: relative;
 }
 
-#events .section-content .section-item:nth-child(2)::before,
-#events .section-content .section-item:nth-child(4)::before {
+#events .section-content .section-item::before {
   content: "";
   position: absolute;
   width: 5.5%;
@@ -627,16 +613,7 @@ h3 {
 
 #events .section-content .section-item:nth-child(1)::before,
 #events .section-content .section-item:nth-child(3)::before {
-  content: "";
-  position: absolute;
-  width: 5.5%;
-  aspect-ratio: 1 / 1;
-  background-color: white;
-  border-radius: 50%;
   left: 111.2%;
-  transform: translateX(-50%);
-  z-index: 2;
-  border: 3px solid #8a6f54;
 }
 
 #events .section-content .section-item:nth-child(1)::before,
