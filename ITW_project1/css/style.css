@@ -625,3 +625,37 @@ h3 {
 #events .section-content .section-item:nth-child(4)::before {
   top: 30%;
 }
+
+#events .section-item h3,
+#events .section-item .desc {
+  position: absolute; /* Абсолютное позиционирование */
+  left: 35%; /* Центрирование по горизонтали */
+  transform: translateX(-50%) translateY(-200%); /* Точное центрирование */
+  color: white; /* Цвет текста */
+  z-index: 2; /* Текст поверх картинки */
+  text-align: left; /* Выравнивание по центру */
+}
+
+#events .section-item .date {
+  position: absolute; /* Абсолютное позиционирование */
+  left: 89%; /* Центрирование по горизонтали */
+  transform: translateX(-50%) translateY(50%); /* Точное центрирование */
+  color: white; /* Цвет текста */
+  z-index: 2; /* Текст поверх картинки */
+  text-align: right; /* Выравнивание по центру */
+}
+
+#events .section-item h3 {
+  font-size: 1.5rem; /* Размер шрифта */
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #171717;
+  border: 2px dotted #8a6f54;
+}
+#events .section-item h3 a {
+  color: #171717;
+  text-decoration: none;
+}
+
+#events .section-item .desc {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для лучшей читаемости */
+}
