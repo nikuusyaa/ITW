@@ -730,8 +730,8 @@ h3 {
 
 #events .section-item:nth-child(1) .date::before,
 #events .section-item:nth-child(3) .date::before {
-  left: -30%;
-  width: 130%;
+  left: -0%;
+  width: 150%;
 }
 
 /*add brown line to circle pseudo element*/
