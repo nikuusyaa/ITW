@@ -26,7 +26,7 @@ body {
   width: 100vw;
   height: 95vh;
   position: relative;
-  background: url("../img/bg-header.png") no-repeat center / 75vw 82vh; /* Фоновое изображение */
+  background: url("../img/bg-header.png") no-repeat center / 75vw 82vh;
   color: #fff;
   font-size: 2rem;
   box-shadow:/* left shadow */ inset 250px 0 50px -20px rgba(0, 0, 0, 1),
@@ -1071,6 +1071,21 @@ h3 {
   font-size: 14px;
 }
 
+/* add image before span*/
+#contact .section-content > span:nth-of-type(3)::before {
+  content: "";
+  display: block;
+  background-image: url("../img/benson.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 60%;
+  width: 96px;
+  height: 90px;
+  margin-left: 70px;
+  margin-bottom: 10px;
+  filter: sepia(100%) saturate(70%) brightness(0.7) contrast(1.2) blur(1.2px);
+}
+
 /* two columns for contact form */
 #contact .section-content .contact-form {
   grid-column: 2 / span 2; /*2nd and 3rd cols*/
@@ -1087,7 +1102,7 @@ h3 {
   width: 80%;
   margin: 0;
   transform: translateX(12%);
-  margin-top: 150px;
+  margin-top: 102px;
 }
 #contact .video-popup {
   display: none;
@@ -1099,6 +1114,22 @@ h3 {
   grid-row: 4;
   font-style: italic;
   font-size: 14px;
+  display: inline-block;
+}
+
+/* add image before span*/
+#contact .section-content > span:nth-of-type(2)::before {
+  content: "";
+  display: block;
+  background-image: url("../img/bernard.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  margin-left: 70px;
+  margin-bottom: 10px;
+  filter: sepia(100%) saturate(70%) brightness(0.7) contrast(0.8) blur(1.1px);
 }
 
 #contact .section-content > span:nth-of-type(1) {
