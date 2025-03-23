@@ -690,6 +690,26 @@ h3 {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+/*hover effect: h3 goes a little bit higher when on hover*/
+#events .section-item:nth-child(1):has(img:hover) h3 {
+  transition: transform 0.3s ease;
+  padding-bottom: 35px; /* Снизу отступ */
+  top: 80%;
+}
+
+#events .section-item:nth-child(2):has(img:hover) h3,
+#events .section-item:nth-child(4):has(img:hover) h3 {
+  transition: transform 0.3s ease;
+  padding-bottom: 35px; /* Снизу отступ */
+  top: 105%;
+}
+
+#events .section-item:nth-child(3):has(img:hover) h3 {
+  transition: transform 0.3s ease;
+  padding-bottom: 35px; /* Снизу отступ */
+  top: 72%;
+}
+
 /*position date */
 #events .section-item:nth-child(2) .date,
 #events .section-item:nth-child(4) .date {
@@ -761,5 +781,5 @@ h3 {
 }
 
 #events .section-item .desc {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* shadow */
+  color: violet;
 }
