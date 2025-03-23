@@ -1054,8 +1054,9 @@ h3 {
 #contact .section-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
   gap: 20px;
+  row-gap: 5px;
   align-items: start;
   width: 100%;
   position: relative;
@@ -1065,6 +1066,9 @@ h3 {
 #contact .section-content > span:nth-of-type(3) {
   grid-column: 1;
   grid-row: 2;
+  font-style: italic;
+  padding-left: 75px;
+  font-size: 14px;
 }
 
 /* two columns for contact form */
@@ -1083,7 +1087,7 @@ h3 {
   width: 80%;
   margin: 0;
   transform: translateX(12%);
-  margin-top: 135px;
+  margin-top: 150px;
 }
 #contact .video-popup {
   display: none;
@@ -1093,11 +1097,25 @@ h3 {
 #contact .section-content > span:nth-of-type(2) {
   grid-column: 3;
   grid-row: 4;
+  font-style: italic;
+  font-size: 14px;
 }
 
 #contact .section-content > span:nth-of-type(1) {
   grid-column: 1;
-  grid-row: 5;
+  grid-row: 6;
+  width: 180%;
+  margin-left: 65px;
+  font-style: italic;
+  padding-bottom: 20px;
+  font-size: 15px;
+  opacity: 0.65;
+}
+
+#contact .section-content a {
+  text-decoration: none;
+  color: #8a6f54;
+  font-style: italic;
 }
 
 #contact .contact-form {
