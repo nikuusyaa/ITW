@@ -18,6 +18,8 @@ body {
   margin: 0;
 }
 
+/*************************************** Home, header, about styling ********************************************************/
+
 #header-title {
   padding: 25px 0;
   background-position: center;
@@ -205,6 +207,8 @@ section {
   order: 1;
 }
 
+/*************************************** Video player styling ********************************************************/
+
 .video-player {
   display: flex;
   position: relative;
@@ -391,6 +395,8 @@ button::before {
   margin: 0 auto;
 }
 
+/*************************************** Products section styling ********************************************************/
+
 #products {
   position: relative;
   overflow: hidden;
@@ -408,11 +414,11 @@ button::before {
 
 @media (max-width: 1000px) {
   #products .section-content {
-    flex-wrap: wrap; /* Перенос элементов на новую строку */
+    flex-wrap: wrap; 
   }
 
   #products .section-item {
-    flex: 1 1 calc(50% - 1rem); /* Два элемента в строке с учетом промежутка */
+    flex: 1 1 calc(50% - 1rem); 
     box-sizing: border-box;
   }
 }
@@ -581,7 +587,7 @@ h3 {
   transition: filter 0.3s;
   filter: none;
 }
-
+/*************************************** Events section styling ********************************************************/
 #events img {
   max-width: 100%;
   filter: grayscale(100%) sepia(65%) brightness(120%) contrast(110%) blur(1.1px);
@@ -620,7 +626,7 @@ h3 {
 #events .section-content .section-item {
   position: relative;
 }
-
+/*circle pseudo elements*/
 #events .section-content .section-item::before {
   content: "";
   position: absolute;
@@ -632,6 +638,13 @@ h3 {
   transform: translateX(-50%);
   z-index: 2;
   border: 3px solid #8a6f54;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/*circle on hover styling*/
+#events .section-content .section-item:has(img:hover)::before {
+  border-color: #000280; /* синий цвет */
+  background-color: #000280;
 }
 
 #events .section-content .section-item:nth-child(1)::before,
@@ -774,7 +787,7 @@ h3 {
   width: 150%;
 }
 
-/*add brown line to circle pseudo element*/
+/*add small brown line to circle pseudo element*/
 #events .section-item .date::after {
   content: "";
   position: absolute;
@@ -785,6 +798,10 @@ h3 {
   border-bottom: 2px solid #8a6f54;
   z-index: 1;
   box-sizing: border-box;
+}
+/*on hover pseudo element is blue*/
+#events .section-item:has(img:hover) .date::after {
+  border-bottom-color: #000280;
 }
 
 #events .section-item:nth-child(2) .date::after,
@@ -807,38 +824,33 @@ h3 {
   font-size: 14px;
 }
 
-#events .section-item:nth-child(1):has(img:hover) .desc {
+/*style description on hover*/
+#events .section-item:has(img:hover) .desc {
   opacity: 1;
   color: #171717;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#events .section-item:nth-child(1):has(img:hover) .desc {
   top: 71%;
   width: 40%;
   left: 29%;
-  background-color: rgba(255, 255, 255, 0.7);
 }
 
 #events .section-item:nth-child(2):has(img:hover) .desc {
-  opacity: 1;
-  color: #171717;
   top: 92%;
   width: 36%;
   right: -10.1%;
-  background-color: rgba(255, 255, 255, 0.7);
 }
 
 #events .section-item:nth-child(3):has(img:hover) .desc {
-  opacity: 1;
-  color: #171717;
   top: 63.4%;
   width: 40%;
   right: 31.1%;
-  background-color: rgba(255, 255, 255, 0.7);
 }
 
 #events .section-item:nth-child(4):has(img:hover) .desc {
-  opacity: 1;
-  color: #171717;
   top: 92.9%;
   width: 20%;
   right: -2.2%;
-  background-color: rgba(255, 255, 255, 0.7);
 }
