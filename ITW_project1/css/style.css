@@ -654,6 +654,7 @@ h3 {
   transform: translateX(-50%) translateY(-149%);
 }
 
+/*position the h3 element(link) at events*/
 #events .section-item:nth-child(1) h3 {
   left: 28%;
 }
@@ -668,8 +669,8 @@ h3 {
   right: -25%;
 }
 
-#events .section-item:nth-child(1) h3,
-#events .section-item:nth-child(3) h3 {
+/*dotted borders for h3 element at events*/
+#events .section-item h3 {
   padding: 15px;
   color: #171717;
   border-right: 2px dotted rgba(188, 185, 185, 0.7);
@@ -678,18 +679,18 @@ h3 {
 
 #events .section-item:nth-child(2) h3,
 #events .section-item:nth-child(4) h3 {
-  padding: 15px;
-  color: #171717;
   border-left: 2px dotted rgba(188, 185, 185, 0.7);
-  border-top: 2px dotted rgba(188, 185, 185, 0.7);
+  border-right: none;
 }
 
+/*style link*/
 #events .section-item h3 a {
   color: #171717;
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+/*position date */
 #events .section-item:nth-child(2) .date,
 #events .section-item:nth-child(4) .date {
   position: absolute;
@@ -702,8 +703,19 @@ h3 {
   font-family: IM Fell DW Pica;
 }
 
-#events .section-item:nth-child(2) .date::before,
-#events .section-item:nth-child(4) .date::before {
+#events .section-item:nth-child(1) .date,
+#events .section-item:nth-child(3) .date {
+  position: absolute;
+  right: 0%;
+  transform: translateX(-50%) translateY(90%);
+  color: #171717;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  font-family: IM Fell DW Pica;
+}
+/*adding dotted borders to date*/
+#events .section-item .date::before {
   content: "";
   position: absolute;
   top: -10px;
@@ -716,8 +728,14 @@ h3 {
   box-sizing: border-box;
 }
 
-#events .section-item:nth-child(1) .date::after,
-#events .section-item:nth-child(3) .date::after {
+#events .section-item:nth-child(1) .date::before,
+#events .section-item:nth-child(3) .date::before {
+  left: -30%;
+  width: 130%;
+}
+
+/*add brown line to circle pseudo element*/
+#events .section-item .date::after {
   content: "";
   position: absolute;
   top: -10px;
@@ -731,53 +749,15 @@ h3 {
 
 #events .section-item:nth-child(2) .date::after,
 #events .section-item:nth-child(4) .date::after {
-  content: "";
-  position: absolute;
   top: -10px;
   left: -97%;
   width: 30%;
-  height: calc(100% + 20px);
-  border-bottom: 2px solid #8a6f54;
-  z-index: 1;
-  box-sizing: border-box;
 }
 
 #events .section-item:nth-child(2) .date::after {
-  content: "";
-  position: absolute;
   top: -10px;
   left: -100%;
   width: 30%;
-  height: calc(100% + 20px);
-  border-bottom: 2px solid #8a6f54;
-  z-index: 1;
-  box-sizing: border-box;
-}
-
-#events .section-item:nth-child(1) .date::before,
-#events .section-item:nth-child(3) .date::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 0%;
-  width: 150%;
-  height: calc(100% + 20px);
-  border-top: 2px dotted rgba(188, 185, 185, 0.7);
-  border-bottom: 2px dotted rgba(188, 185, 185, 0.7);
-  z-index: 1;
-  box-sizing: border-box;
-}
-
-#events .section-item:nth-child(1) .date,
-#events .section-item:nth-child(3) .date {
-  position: absolute;
-  right: 0%;
-  transform: translateX(-50%) translateY(90%);
-  color: #171717;
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0.7);
-  font-size: 1.2rem;
-  font-family: IM Fell DW Pica;
 }
 
 #events .section-item .desc {
