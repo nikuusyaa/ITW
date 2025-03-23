@@ -1162,6 +1162,7 @@ h3 {
 #contact .contact-form select,
 #contact .contact-form textarea {
   width: 100%;
+  box-sizing: border-box;
   padding: 10px;
   margin-bottom: 2px;
   border: 5px solid #8a6f54;
