@@ -657,13 +657,20 @@ h3 {
 /*position the h3 element(link) at events*/
 #events .section-item:nth-child(1) h3 {
   left: 28%;
+  top: 77%;
+  transition: top 0.3s ease, padding-bottom 0.3s ease, transform 0.3s ease;
 }
 #events .section-item:nth-child(3) h3 {
   left: 22%;
+  top: 68%;
+  transition: top 0.3s ease, padding-bottom 0.3s ease, transform 0.3s ease;
 }
 
-#events .section-item:nth-child(2) h3 {
+#events .section-item:nth-child(2) h3,
+#events .section-item:nth-child(4) h3 {
   right: -19%;
+  top: 100%;
+  transition: top 0.3s ease, padding-bottom 0.3s ease, transform 0.3s ease;
 }
 #events .section-item:nth-child(4) h3 {
   right: -25%;
@@ -692,20 +699,17 @@ h3 {
 
 /*hover effect: h3 goes a little bit higher when on hover*/
 #events .section-item:nth-child(1):has(img:hover) h3 {
-  transition: transform 0.3s ease;
   padding-bottom: 35px; /* Снизу отступ */
   top: 80%;
 }
 
 #events .section-item:nth-child(2):has(img:hover) h3,
 #events .section-item:nth-child(4):has(img:hover) h3 {
-  transition: transform 0.3s ease;
   padding-bottom: 35px; /* Снизу отступ */
   top: 105%;
 }
 
 #events .section-item:nth-child(3):has(img:hover) h3 {
-  transition: transform 0.3s ease;
   padding-bottom: 35px; /* Снизу отступ */
   top: 72%;
 }
