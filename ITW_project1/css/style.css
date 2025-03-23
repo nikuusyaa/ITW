@@ -656,29 +656,31 @@ h3 {
 
 /*position the h3 element(link) at events*/
 #events .section-item:nth-child(1) h3 {
-  left: 28%;
+  left: 32%;
   top: 77%;
   transition: top 0.3s ease, padding-bottom 0.3s ease, transform 0.3s ease;
 }
 #events .section-item:nth-child(3) h3 {
-  left: 22%;
+  left: 26%;
   top: 68%;
   transition: top 0.3s ease, padding-bottom 0.3s ease, transform 0.3s ease;
 }
 
 #events .section-item:nth-child(2) h3,
 #events .section-item:nth-child(4) h3 {
-  right: -19%;
+  right: -23%;
   top: 100%;
   transition: top 0.3s ease, padding-bottom 0.3s ease, transform 0.3s ease;
 }
 #events .section-item:nth-child(4) h3 {
-  right: -25%;
+  right: -28%;
 }
 
 /*dotted borders for h3 element at events*/
 #events .section-item h3 {
   padding: 15px;
+  padding-left: 32px;
+  padding-right: 28px;
   color: #171717;
   border-right: 2px dotted rgba(188, 185, 185, 0.7);
   border-top: 2px dotted rgba(188, 185, 185, 0.7);
@@ -798,6 +800,45 @@ h3 {
   width: 30%;
 }
 
+/*style description; add on hover styles*/
 #events .section-item .desc {
-  color: violet;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  font-size: 14px;
+}
+
+#events .section-item:nth-child(1):has(img:hover) .desc {
+  opacity: 1;
+  color: #171717;
+  top: 71%;
+  width: 40%;
+  left: 29%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#events .section-item:nth-child(2):has(img:hover) .desc {
+  opacity: 1;
+  color: #171717;
+  top: 92%;
+  width: 36%;
+  right: -10.1%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#events .section-item:nth-child(3):has(img:hover) .desc {
+  opacity: 1;
+  color: #171717;
+  top: 63.4%;
+  width: 40%;
+  right: 31.1%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#events .section-item:nth-child(4):has(img:hover) .desc {
+  opacity: 1;
+  color: #171717;
+  top: 92.9%;
+  width: 20%;
+  right: -2.2%;
+  background-color: rgba(255, 255, 255, 0.7);
 }
