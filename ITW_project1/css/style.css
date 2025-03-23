@@ -915,7 +915,7 @@ h3 {
   background-color: #8a6f54;
   border-radius: 50%;
   z-index: 2;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 1);
   margin-top: 13%;
 }
 #clients .slider-item:nth-child(2)::after {
@@ -929,7 +929,7 @@ h3 {
   background-color: #8a6f54;
   border-radius: 50%;
   z-index: 2;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 1);
   margin-top: 13%;
 }
 
