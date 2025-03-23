@@ -893,7 +893,13 @@ h3 {
   left: 0;
   top: -30%;
   margin-left: 20%;
-  filter: sepia(100%) saturate(60%) brightness(0.98) contrast(1);
+  filter: sepia(100%) saturate(60%) brightness(0.98) contrast(1) blur(0.7px);
+  transition: filter 0.9s ease;
+}
+
+/*on hover image styling*/
+#clients .section-content.slider:hover .slider-item img {
+  filter: sepia(0%) saturate(40%) brightness(110%) contrast(0.7) blur(0.5px);
 }
 #clients .slider .section-item:first-child img {
   width: 200px;
@@ -903,7 +909,6 @@ h3 {
 }
 
 /*adding circle pseudo element */
-
 #clients .slider-item:nth-child(1)::after {
   content: "";
   position: absolute;
@@ -917,6 +922,7 @@ h3 {
   z-index: 2;
   box-shadow: 0 0 50px rgba(0, 0, 0, 1);
   margin-top: 13%;
+  transition: background-color 0.3s ease;
 }
 #clients .slider-item:nth-child(2)::after {
   content: "";
@@ -931,8 +937,14 @@ h3 {
   z-index: 2;
   box-shadow: 0 0 50px rgba(0, 0, 0, 1);
   margin-top: 13%;
+  transition: background-color 0.3s ease;
 }
 
+/*on hover pseudo element circle styling*/
+#clients .section-content.slider:hover .slider-item:nth-child(1)::after,
+#clients .section-content.slider:hover .slider-item:nth-child(2)::after {
+  background-color: #000;
+}
 /*positioning and styling*/
 #clients .section-item:nth-child(2) blockquote {
   position: relative;
@@ -946,6 +958,8 @@ h3 {
   bottom: 10;
   margin-top: 15%;
   border-radius: 15px;
+  transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 #clients .section-item:nth-child(1) blockquote {
@@ -960,6 +974,13 @@ h3 {
   bottom: 10;
   margin-top: 15%;
   border-radius: 15px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+#clients .section-content.slider:hover .slider-item:nth-child(1) blockquote,
+#clients .section-content.slider:hover .slider-item:nth-child(2) blockquote {
+  background-color: #000;
 }
 
 /*background image*/
@@ -967,6 +988,7 @@ h3 {
   position: relative;
   overflow: hidden;
 }
+
 #clients::after {
   content: "";
   position: absolute;
@@ -975,9 +997,8 @@ h3 {
   width: 330px;
   height: 650px;
   opacity: 0.2;
-
   top: -390px;
-  right: 570px;
+  left: 70px;
   background-position: -310px 320px;
 }
 
