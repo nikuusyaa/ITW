@@ -414,11 +414,11 @@ button::before {
 
 @media (max-width: 1000px) {
   #products .section-content {
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
   }
 
   #products .section-item {
-    flex: 1 1 calc(50% - 1rem); 
+    flex: 1 1 calc(50% - 1rem);
     box-sizing: border-box;
   }
 }
@@ -588,6 +588,25 @@ h3 {
   filter: none;
 }
 /*************************************** Events section styling ********************************************************/
+
+#events {
+  position: relative; /* если нет, то обязательно добавить */
+  overflow: hidden; /* добавьте, чтобы обрезать псевдоэлемент */
+}
+#events::after {
+  content: "";
+  position: absolute;
+  background: url("../img/wine.png") no-repeat center center;
+  background-size: cover;
+  width: 650px;
+  height: 650px;
+  opacity: 0.2;
+
+  top: -250px;
+  right: -365px;
+  background-position: -650px -150px;
+}
+
 #events img {
   max-width: 100%;
   filter: grayscale(100%) sepia(65%) brightness(120%) contrast(110%) blur(1.1px);
