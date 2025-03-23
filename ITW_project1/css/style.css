@@ -1053,7 +1053,7 @@ h3 {
 /*************************************** Contact section styling ********************************************************/
 #contact .section-content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto auto;
   gap: 20px;
   row-gap: 5px;
@@ -1064,10 +1064,10 @@ h3 {
 
 /*Powered by Mr. Benson first column */
 #contact .section-content > span:nth-of-type(3) {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 2;
   font-style: italic;
-  padding-left: 75px;
+  transform: translateX(-40%);
   font-size: 14px;
 }
 
@@ -1088,18 +1088,18 @@ h3 {
 
 /* two columns for contact form */
 #contact .section-content .contact-form {
-  grid-column: 2 / span 2; /*2nd and 3rd cols*/
+  grid-column: 3 / span 2; /*3nd and 4rd cols*/
   grid-row: 1 / span 3;
-  width: 70%;
+  width: 90%;
   margin: 0;
-  transform: translateX(22%);
+  transform: translateX(-10%);
 }
 
 /*two columns for video */
 #contact .section-content .video-player {
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 3;
   grid-row: 3 / span 3;
-  width: 80%;
+  width: 70%;
   margin: 0;
   transform: translateX(12%);
   margin-top: 102px;
@@ -1110,14 +1110,15 @@ h3 {
 
 /* Bernard Black right bottom */
 #contact .section-content > span:nth-of-type(2) {
-  grid-column: 3;
+  grid-column: 4;
   grid-row: 4;
   font-style: italic;
   font-size: 14px;
   display: inline-block;
+  transform: translateX(-40%);
 }
 
-/* add image before span*/
+/* add image before Bernard Black span*/
 #contact .section-content > span:nth-of-type(2)::before {
   content: "";
   display: block;
