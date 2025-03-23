@@ -637,16 +637,12 @@ h3 {
 #events .section-content .section-item:nth-child(1)::before,
 #events .section-content .section-item:nth-child(3)::before {
   left: 111.2%;
-}
-
-#events .section-content .section-item:nth-child(1)::before,
-#events .section-content .section-item:nth-child(3)::before {
   top: 15%;
 }
 
 #events .section-content .section-item:nth-child(2)::before,
 #events .section-content .section-item:nth-child(4)::before {
-  top: 30%;
+  top: 19%;
 }
 
 #events .section-item h3,
@@ -716,6 +712,44 @@ h3 {
   height: calc(100% + 20px);
   border-top: 2px dotted rgba(188, 185, 185, 0.7);
   border-bottom: 2px dotted rgba(188, 185, 185, 0.7);
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+#events .section-item:nth-child(1) .date::after,
+#events .section-item:nth-child(3) .date::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 195%;
+  width: 40%;
+  height: calc(100% + 20px);
+  border-bottom: 2px solid #8a6f54;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+#events .section-item:nth-child(2) .date::after,
+#events .section-item:nth-child(4) .date::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -97%;
+  width: 30%;
+  height: calc(100% + 20px);
+  border-bottom: 2px solid #8a6f54;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+#events .section-item:nth-child(2) .date::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -100%;
+  width: 30%;
+  height: calc(100% + 20px);
+  border-bottom: 2px solid #8a6f54;
   z-index: 1;
   box-sizing: border-box;
 }
