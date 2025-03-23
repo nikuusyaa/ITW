@@ -19,19 +19,18 @@ body {
 }
 
 #header-title {
+  padding: 25px 0;
   background-position: center;
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
   position: relative;
-
-  background: radial-gradient(
-      circle at center,
-      rgba(0, 0, 0, 0) 40%,
-      rgba(0, 0, 0, 1) 80%
-    ),
-    url("../img/bg-header.png") no-repeat center / contain rgb(55, 51, 51);
+  background: url("../img/bg-header.png") no-repeat center / 75vw 82vh; /* Фоновое изображение */
   color: #fff;
   font-size: 2rem;
+  box-shadow:/* left shadow */ inset 250px 0 50px -20px rgba(0, 0, 0, 1),
+    /* right shadow */ inset -250px 0 50px -20px rgba(0, 0, 0, 1),
+    inset 0 142px 50px -20px rgba(0, 0, 0, 1),
+    /* top shadow */ inset 0 -142px 50px -20px rgba(0, 0, 0, 1); /* bottom shadow */
 }
 
 #header-title::before {
@@ -41,8 +40,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.25); 
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
   transition: opacity 0.5s ease;
   pointer-events: none;
 }
@@ -57,13 +56,13 @@ body {
 
 #header-title span:nth-child(2) {
   position: absolute;
-  top: 2%;
+  top: 0%;
   left: 1%;
 }
 
 #header-title span:nth-child(3) {
   position: absolute;
-  top: 2%;
+  top: 0%;
   right: 1%;
 }
 
