@@ -1285,3 +1285,55 @@ h3 {
   font-size: 14px;
   font-weight: normal;
 }
+
+footer {
+  color: #fff;
+  background-color: #000;
+
+  /* Пояснение параметров:
+  x-offset = 0,
+  y-offset = -20px (тень уходит вверх),
+  blur-radius = 20px,
+  spread-radius = -10px (сужает тень),
+  цвет = rgba(0, 0, 0, 0.8) */
+  box-shadow: 0 -20px 20px 10px rgba(0, 0, 0, 1);
+}
+footer .section-content {
+  display: grid;
+  grid-template-columns: 2fr 5fr 2fr;
+  grid-template-rows: auto auto auto;
+  width: 100%;
+  font-family: IM Fell DW Pica;
+  opacity: 0.8;
+}
+footer div span:nth-child(1) {
+  grid-column: 1;
+  grid-row: 3;
+  padding-bottom: 40px;
+  font-size: 1.5rem;
+  justify-self: end;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer div span:nth-child(2) {
+  grid-column: 3;
+  grid-row: 3;
+  padding-bottom: 40px;
+  font-size: 1.5rem;
+  justify-self: end;
+}
+footer div span:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 2rem;
+  justify-self: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+footer img {
+  width: 8%;
+}
