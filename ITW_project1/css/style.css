@@ -1084,6 +1084,7 @@ h3 {
   margin-left: 70px;
   margin-bottom: 10px;
   filter: sepia(100%) saturate(70%) brightness(0.7) contrast(1.2) blur(1.2px);
+  transition: filter 0.5s ease;
 }
 
 /* two columns for contact form */
@@ -1131,6 +1132,15 @@ h3 {
   margin-left: 70px;
   margin-bottom: 10px;
   filter: sepia(100%) saturate(70%) brightness(0.7) contrast(0.8) blur(1.1px);
+  transition: filter 0.5s ease;
+}
+
+/*no filter on hover for images*/
+#contact .section-content > span:hover::before {
+  filter: none;
+}
+#contact .section-content > span:hover a {
+  color: #000280;
 }
 
 #contact .section-content > span:nth-of-type(1) {
