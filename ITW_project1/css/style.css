@@ -89,6 +89,12 @@ body {
   background-color: black;
   z-index: 999;
   margin-top: 15%;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease;
+}
+/*on hover styling for header menu*/
+#header-menu:hover {
+  transform: translateX(0);
 }
 
 #header-menu ul {
