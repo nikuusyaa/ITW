@@ -1179,6 +1179,17 @@ h3 {
   transform: translateX(12%);
   margin-top: 102px;
 }
+
+#contact .video-player.fullscreen {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  transform: none;
+}
+
+#contact .video-player.fullscreen .video-controls {
+  max-width: 1128px;
+}
 #contact .video-popup {
   display: none;
 }
