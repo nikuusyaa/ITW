@@ -1319,7 +1319,7 @@ h3 {
   background-color: #9e6d3c4f;
 }
 
-/*manny*/
+/*************************************** Manny section styling ********************************************************/
 #manny {
   opacity: 0;
   visibility: hidden;
@@ -1373,7 +1373,7 @@ h3 {
   font-size: 14px;
   font-weight: normal;
 }
-
+/*************************************** Footer styling ********************************************************/
 footer {
   color: #fff;
   background-color: #000;
@@ -1424,4 +1424,41 @@ footer div span:nth-child(3) {
 }
 footer img {
   width: 8%;
+}
+/*************************************** Arrow styling ********************************************************/
+#bernard {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 100;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000280;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#bernard:hover i {
+  color: white;
+}
+
+#bernard i {
+  color: #000280;
+}
+
+#bernard:hover {
+  background-color: rgba(0, 0, 128, 0.7);
+}
+
+.scrolled #bernard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+#bernard,
+.scrolled #bernard {
+  transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease,
+    color 0.5s ease;
 }
