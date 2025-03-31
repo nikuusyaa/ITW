@@ -106,7 +106,7 @@ body {
 
 #header-menu ul li a {
   font-size: 0;
-  transition: font-size 0.3s;
+  transition: font-size 0.3s ease;
 }
 
 #header-menu:hover ul li a {
@@ -179,10 +179,11 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 #header-menu a:hover {
-  color: #ccc;
+  color: #000280;
 }
 
 section {
