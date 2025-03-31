@@ -737,6 +737,31 @@ h3 {
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
+/*small brown lines near circles*/
+#events .section-content .section-item:nth-child(2)::after,
+#events .section-content .section-item:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  top: 24%;
+  left: -10%;
+  width: 5%;
+  border-bottom: 2px solid #8a6f54;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+#events .section-content .section-item:nth-child(1)::after,
+#events .section-content .section-item:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  top: 19%;
+  right: -10%;
+  width: 5%;
+  border-bottom: 2px solid #8a6f54;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
 /*circle on hover styling*/
 #events .section-content .section-item:has(img:hover)::before {
   border-color: #000280; /* синий цвет */
@@ -843,8 +868,8 @@ h3 {
 #events .section-item:nth-child(2) .date,
 #events .section-item:nth-child(4) .date {
   position: absolute;
-  left: 10%;
-  transform: translateX(-50%) translateY(70%);
+  left: 0%;
+  transform: translateX(30%) translateY(70%);
   color: #171717;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.7);
@@ -881,36 +906,6 @@ h3 {
 #events .section-item:nth-child(3) .date::before {
   left: -0%;
   width: 150%;
-}
-
-/*add small brown line to circle pseudo element*/
-#events .section-item .date::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 195%;
-  width: 40%;
-  height: calc(100% + 20px);
-  border-bottom: 2px solid #8a6f54;
-  z-index: 1;
-  box-sizing: border-box;
-}
-/*on hover pseudo element is blue*/
-#events .section-item:has(img:hover) .date::after {
-  border-bottom-color: #000280;
-}
-
-#events .section-item:nth-child(2) .date::after,
-#events .section-item:nth-child(4) .date::after {
-  top: -10px;
-  left: -97%;
-  width: 30%;
-}
-
-#events .section-item:nth-child(2) .date::after {
-  top: -10px;
-  left: -100%;
-  width: 30%;
 }
 
 /*style description; add on hover styles*/
