@@ -433,6 +433,30 @@ progress::-webkit-progress-value {
   text-shadow: 0px 0px 8px #ffffff;
 }
 
+.video-player[data-state="ended"] .playpause::before {
+  content: "\f0e2";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 20px;
+  text-shadow: 0px 0px 4px #ffffff;
+}
+
+.video-player[data-state="ended"]::before {
+  content: "\f0e2";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  opacity: 0.6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #000280;
+  pointer-events: none;
+  z-index: 10;
+  text-shadow: 0px 0px 10px #ffffff;
+}
+
 button::before {
   font-size: 16px;
   color: #04053e;
