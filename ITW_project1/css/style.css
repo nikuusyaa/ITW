@@ -16,6 +16,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
   margin: 0;
+  justify-content: center;
 }
 
 /*************************************** Home, header, about styling ********************************************************/
@@ -193,14 +194,13 @@ body {
 section {
   height: 100%;
   margin: 0 auto;
-  max-width: 1050px;
+  max-width: 1200px;
   background-color: #fffef0;
   margin-top: 10rem;
   margin-bottom: 10rem;
   box-shadow: 0 0 20px black, inset 0px 0px 90px #9a5d1c;
   position: relative;
 }
-
 #home::before,
 #home::after {
   content: "";
@@ -530,15 +530,14 @@ button::before {
   padding-bottom: 20px;
 }
 
-@media (max-width: 1000px) {
-  #products .section-content {
-    flex-wrap: wrap;
-  }
-
-  #products .section-item {
-    flex: 1 1 calc(50% - 1rem);
-    box-sizing: border-box;
-  }
+#products .section-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 180px));
+  gap: 1rem;
+  justify-content: center;
+  max-width: calc(4 * 280px + 3 * 1rem);
+  margin: 0 auto;
+  width: 80%;
 }
 
 #products img {
@@ -590,14 +589,14 @@ button::before {
   bottom: 2%;
   transition: opacity 0.3s ease, bottom 0.3s ease;
 }
-/*FIX ME TRANSITION SHOULD LAST LONGER FOR A*/
+
 #products .section-item a {
   text-decoration: none;
   color: #000280;
   position: relative;
   bottom: -30px;
   opacity: 0;
-  transition: opacity 2s ease-out, bottom 2s ease-out;
+  transition: opacity 1s ease-out, bottom 1s ease-out;
 }
 
 #products .section-item:hover a {
