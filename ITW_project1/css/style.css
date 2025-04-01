@@ -1365,7 +1365,7 @@ h3 {
 #contact .section-content > span:nth-of-type(1) {
   grid-column: 1;
   grid-row: 6;
-  width: 180%;
+  width: 220%;
   margin-left: 65px;
   font-style: italic;
   padding-bottom: 20px;
@@ -1528,11 +1528,11 @@ footer {
   color: #fff;
   background-color: #000;
 
-  /* Пояснение параметров:
+  /* 
   x-offset = 0,
-  y-offset = -20px (тень уходит вверх),
+  y-offset = -20px (shadow up),
   blur-radius = 20px,
-  spread-radius = -10px (сужает тень),
+  spread-radius = -10px (thiner ),
   цвет = rgba(0, 0, 0, 0.8) */
   box-shadow: 0 -20px 20px 10px rgba(0, 0, 0, 1);
 }
@@ -1551,10 +1551,23 @@ footer div span:nth-child(1) {
   font-size: 1.5rem;
   justify-self: end;
 }
-
 footer a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+  transition: color 0.5s ease-in-out, text-shadow 0.5s ease-out;
+}
+
+/*first link styling on hover*/
+footer span:nth-child(1) a:hover {
+  color: #000280;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 1),
+    0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+/*second link styling on hover*/
+footer span:nth-child(2) a:hover {
+  color: red;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 1),
+    0px 0px 10px rgba(255, 255, 255, 0.5);
 }
 
 footer div span:nth-child(2) {
