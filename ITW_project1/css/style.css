@@ -795,7 +795,7 @@ h3 {
 #services .section-item:hover img {
   opacity: 0.8;
   filter: none;
-  transform: scale(1.03); /* Увеличение на 5% */
+  transform: scale(1.03); /*image gets bigger*/
 }
 
 #services .section-item:hover li a::before,
@@ -1573,8 +1573,7 @@ footer {
   x-offset = 0,
   y-offset = -20px (shadow up),
   blur-radius = 20px,
-  spread-radius = -10px (thiner ),
-  цвет = rgba(0, 0, 0, 0.8) */
+  spread-radius = -10px (thiner ) */
   box-shadow: 0 -20px 20px 10px rgba(0, 0, 0, 1);
 }
 footer .section-content {
