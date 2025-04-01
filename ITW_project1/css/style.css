@@ -18,6 +18,12 @@ body {
   margin: 0;
   justify-content: center;
 }
+/*selection text color */
+::selection {
+  background: #000280; 
+  color: #fff; 
+  text-shadow: none; 
+}
 
 /*************************************** Home, header, about styling ********************************************************/
 
