@@ -367,7 +367,7 @@ section {
   border: 2px solid #000280;
   padding: 5px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 16px;
   position: fixed;
   display: none;
   z-index: 20;
@@ -396,7 +396,7 @@ progress::-webkit-progress-value {
   border: none;
   background: none;
   font-size: 0;
-  padding-bottom: 14px;
+  padding-bottom: 16px;
 }
 
 .video-player[data-state="paused"] .playpause::before {
@@ -693,7 +693,7 @@ h3 {
 }
 
 #services p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #services ul {
@@ -763,7 +763,7 @@ h3 {
 
 #services .section-item:nth-child(2) ul {
   text-align: end;
-  font-size: 14px;
+  font-size: 16px;
   padding-right: 43%;
 }
 
@@ -997,6 +997,10 @@ h3 {
 #events .section-item:nth-child(4) h3 {
   border-left: 2px dotted rgba(188, 185, 185, 0.7);
   border-right: none;
+  padding-left: 42px;
+}
+#events .section-item:nth-child(3) h3 {
+  padding-right: 45px;
 }
 
 /*style link*/
@@ -1044,7 +1048,7 @@ h3 {
 #events .section-item:nth-child(4) .date {
   position: absolute;
   left: 0%;
-  transform: translateX(30%) translateY(70%);
+  transform: translateX(30%) translateY(85%);
   color: #171717;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.7);
@@ -1056,7 +1060,7 @@ h3 {
 #events .section-item:nth-child(3) .date {
   position: absolute;
   right: 0%;
-  transform: translateX(-50%) translateY(90%);
+  transform: translateX(-50%) translateY(110%);
   color: #171717;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.7);
@@ -1095,30 +1099,30 @@ h3 {
   opacity: 1;
   color: #171717;
   background-color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #events .section-item:nth-child(1):has(img:hover) .desc {
   bottom: 0;
   left: 0;
-  transform: translateY(-520%) translateX(25%);
+  transform: translateY(-430%) translateX(22%);
 }
 
 #events .section-item:nth-child(2):has(img:hover) .desc,
 #events .section-item:nth-child(4):has(img:hover) .desc {
   bottom: 0%;
   right: 0%;
-  transform: translateY(-130%) translateX(-37%);
+  transform: translateY(-90%) translateX(-34.4%);
 }
 
 #events .section-item:nth-child(2):has(img:hover) .desc {
-  transform: translateY(-130%) translateX(-21%);
+  transform: translateY(-90%) translateX(-18%);
 }
 
 #events .section-item:nth-child(3):has(img:hover) .desc {
   bottom: 0%;
   left: 0%;
-  transform: translateY(-638%) translateX(21%);
+  transform: translateY(-538%) translateX(19%);
 }
 
 /*************************************** Clients section styling ********************************************************/
@@ -1255,6 +1259,7 @@ h3 {
   width: 100%;
   height: 50vh;
   overflow: visible;
+  --slider-time: 5; /
 }
 
 #clients .slider-item {
@@ -1263,38 +1268,12 @@ h3 {
   left: 0;
   opacity: 0;
   visibility: hidden;
-  animation: slide 10s infinite;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-#clients .slider-item:nth-child(1) {
-  animation-delay: 0s;
-}
-
-#clients .slider-item:nth-child(2) {
-  animation-delay: 5s;
-}
-
-@keyframes slide {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  10% {
-    opacity: 1;
-    visibility: visible;
-  }
-  50% {
-    opacity: 1;
-    visibility: visible;
-  }
-  60% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
+#clients .slider-item.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*************************************** Contact section styling ********************************************************/
@@ -1315,7 +1294,7 @@ h3 {
   grid-row: 2;
   font-style: italic;
   transform: translateX(-40%);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /* add image before span*/
@@ -1372,7 +1351,7 @@ h3 {
   grid-column: 4;
   grid-row: 4;
   font-style: italic;
-  font-size: 14px;
+  font-size: 16px;
   display: inline-block;
   transform: translateX(-40%);
 }
@@ -1569,7 +1548,7 @@ h3 {
 }
 
 #manny.open > div span:last-of-type {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
 }
 /*************************************** Footer styling ********************************************************/
