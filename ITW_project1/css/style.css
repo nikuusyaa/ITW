@@ -808,7 +808,7 @@ content: "\f111";
   color: #000280;
 }
 #services .section-item li a:hover::before{
-  filter: drop-shadow(0 0 8px rgba(0, 2, 128, 0.7)); /* Альтернативный вариант тени */
+  filter: drop-shadow(0 0 8px rgba(0, 2, 128, 0.7)); 
 }
 /************************** add wine images to the background**************************/
 #services .section-item:nth-child(1):after {
