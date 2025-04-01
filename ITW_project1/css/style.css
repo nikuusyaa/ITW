@@ -361,6 +361,21 @@ section {
   z-index: 1;
 }
 
+.video-popup {
+  background-color: white;
+  color: black;
+  border: 2px solid #000280;
+  padding: 5px;
+  border-radius: 8px;
+  font-size: 14px;
+  position: fixed;
+  display: none;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0.8;
+  box-shadow: 0 0 15px 5px white;
+}
+
 progress::-webkit-progress-value {
   background-color: #000280;
 }
@@ -1492,6 +1507,16 @@ h3 {
   left: 300px;
   background-position: -590px 300px;
   z-index: 0;
+}
+
+/* video #contact */
+#contact .video-popup {
+  transform: translateX(-550%);
+}
+
+#contact .video-player {
+  position: relative;
+  overflow: visible;
 }
 
 /*************************************** Manny section styling ********************************************************/
