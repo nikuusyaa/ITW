@@ -58,7 +58,7 @@ body {
   z-index: 9999;
 }
 #header-title:hover {
-  background-size: 77vw 84vh; /* Увеличиваем размер фона при наведении */
+  background-size: 77vw 84vh; 
 }
 
 #header-title:hover::before {
