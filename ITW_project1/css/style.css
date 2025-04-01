@@ -779,12 +779,15 @@ h3 {
 
 /*add bullets before list elems*/
 #services .section-item:nth-child(2) ul:not(.references ul) li::before {
-  content: "•";
-  font-size: 25px;
+content: "\f111";
+  font-family: "Font Awesome 6 Free"; 
+  font-weight: 900; 
+  font-size: 0.4em;
   vertical-align: middle;
   position: relative;
-  margin-right: 2px;
-  top: -2px;
+  margin-right: 8px; 
+  top: -1px;
+  
 }
 
 #services .section-item:nth-child(2) h3 {
