@@ -93,7 +93,7 @@ body {
   z-index: 999;
   margin-top: 15%;
   transform: translateX(-80%);
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
   box-shadow: 0 0px 10px 20px rgba(0, 0, 0, 1.2);
 }
 /*on hover styling for header menu*/
@@ -184,7 +184,7 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
 }
 
 #header-menu a:hover {
@@ -578,7 +578,7 @@ button::before {
   opacity: 0;
   position: absolute;
   bottom: -30px;
-  transition: opacity 0.3s ease, bottom 0.3s ease;
+  transition: opacity 0.5s ease, bottom 0.5s ease;
   width: 100%;
   text-align: center;
   font-size: 13px;
@@ -587,7 +587,7 @@ button::before {
 #products .section-item:hover p {
   opacity: 1;
   bottom: 2%;
-  transition: opacity 0.3s ease, bottom 0.3s ease;
+  transition: opacity 0.5s ease, bottom 0.5s ease;
 }
 
 #products .section-item a {
@@ -612,7 +612,7 @@ button::before {
   font-family: IM Fell DW Pica;
   font-weight: bold;
   transform: translateY(90%);
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 /*h3 goes a little bit higher on hover*/
 #products .section-item:hover h3 {
@@ -904,7 +904,7 @@ h3 {
   transform: translateX(-50%);
   z-index: 2;
   border: 3px solid #8a6f54;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  transition: border-color 0.5s ease, background-color 0.5s ease;
 }
 
 /*small brown lines near circles*/
@@ -930,7 +930,7 @@ h3 {
   border-bottom: 2px solid #8a6f54;
   z-index: 1;
   box-sizing: border-box;
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
 }
 
 #events .section-content .section-item:hover::after {
@@ -966,21 +966,21 @@ h3 {
 #events .section-item:nth-child(1) h3 {
   left: 0%;
   bottom: -5%;
-  transition: top 0.3s ease, padding-bottom 0.3s ease, transform 0.3s ease;
+  transition: top 0.5s ease, padding-bottom 0.5s ease, transform 0.5s ease;
   transform: translateY(-140%);
 }
 #events .section-item:nth-child(3) h3 {
   left: 0%;
   bottom: -5%;
   transform: translateY(-185%);
-  transition: top 0.3s ease, padding-bottom 0.3s ease, transform 0.3s ease;
+  transition: top 0.5s ease, padding-bottom 0.5s ease, transform 0.5s ease;
 }
 
 #events .section-item:nth-child(2) h3,
 #events .section-item:nth-child(4) h3 {
   right: 0;
   bottom: -5%;
-  transition: top 0.3s ease, padding-bottom 0.3s ease, transform 0.3s ease;
+  transition: top 0.5s ease, padding-bottom 0.5s ease, transform 0.5s ease;
 }
 
 /*dotted borders for h3 element at events*/
@@ -1008,7 +1008,7 @@ h3 {
   color: #171717;
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.7);
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
 }
 
 /*change color on hover*/
@@ -1040,7 +1040,7 @@ h3 {
 }
 
 #events .section-item .date {
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
 }
 
 /*position date */
@@ -1173,7 +1173,7 @@ h3 {
   z-index: 2;
   box-shadow: 0 0 50px rgba(0, 0, 0, 1);
   margin-top: 13%;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 #clients .slider-item:nth-child(2)::after {
   content: "";
@@ -1188,7 +1188,7 @@ h3 {
   z-index: 2;
   box-shadow: 0 0 50px rgba(0, 0, 0, 1);
   margin-top: 13%;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
 /*on hover pseudo element circle styling*/
@@ -1209,7 +1209,7 @@ h3 {
   bottom: 10;
   margin-top: 15%;
   border-radius: 15px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
   text-align: center;
 }
 
@@ -1225,7 +1225,7 @@ h3 {
   bottom: 10;
   margin-top: 15%;
   border-radius: 15px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
   text-align: center;
 }
 
@@ -1415,7 +1415,7 @@ h3 {
   margin-bottom: 2px;
   border: 5px solid #8a6f54;
   opacity: 0.8;
-  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.5s ease, box-shadow 0.5s ease;
 }
 
 /* background colors */
@@ -1650,6 +1650,6 @@ footer img {
 }
 #bernard,
 .scrolled #bernard {
-  transition: background-color 0.3s ease, opacity 0.3s ease, border 0.3s ease,
+  transition: background-color 0.5s ease, opacity 0.5s ease, border 0.5s ease,
     color 0.5s ease;
 }
