@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Ubuntu;
   background-color: #fff;
   color: #000;
 }
@@ -10,41 +10,50 @@ body {
 #head {
   background-color: #3c1f0a;
   color: #fff;
-  padding: 10px 20px;
 }
 
 #head h1 {
   padding-top: 30px;
   padding-bottom: 30px;
-  font-style: italic;
-  padding-left: 150px;
-  margin: 0;
   font-size: 1.8rem;
 }
 
 #head h1 a {
-  font-size: 40px;
+  font-size: 4rem;
   text-decoration: none;
   color: white;
 }
 
 #subtitle {
   display: block;
-  color: #d5a17c;
+  color: #b15e23;
   font-size: large;
   font-weight: 200;
 }
 
 #list1 {
-  padding-left: 150px;
-  font-size: small;
+  padding: 1%;
+  background-color: #b15e23;
+}
+
+#list1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#list1 li {
+  max-width: 100%;
+}
+#list1 a {
+  display: inline-block;
+  min-width: 100%;
 }
 
 #head ul {
   list-style: none;
-  margin: 10px 0 0 0;
+  margin: 0 0 0 0;
   padding: 0;
-  font-size: 9px;
+  font-size: 12px;
   display: flex;
   gap: 15px;
 }
@@ -65,10 +74,14 @@ body {
   display: block;
   position: absolute;
   left: 30%;
-  bottom: -15px;
+  bottom: -85%;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid #d5a17c;
+}
+
+#list1 a:hover {
+  background-color: #3c1f0a;
 }
 
 h2 {
@@ -85,29 +98,88 @@ h2 {
 }
 #about {
   background-image: linear-gradient(white, #e5e5e5);
-  padding: 40px;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 1%;
+  padding-top: 1%;
 }
+
+#about p,
+#about h2 {
+  padding-left: 2%;
+  padding-right: 2%;
+  margin: 0 auto;
+}
+
+#list1,
+#head h1 {
+  margin: 0 auto;
+  padding-left: 2%;
+}
+
+#about h2 {
+  padding-bottom: 2%;
+}
+
 .new {
   display: flex;
+
+  margin: 0 auto;
 }
 
 #allLectures {
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-left: 80px;
+  margin-left: 2%;
   margin-right: 10px;
 }
-
-#prednasky {
-  margin-left: 80px;
+@media (max-width: 991px) {
+  #allLectures {
+    grid-template-columns: 1fr;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 100%;
+  }
 }
+
+@media (max-width: 991px) {
+  #cviceni {
+    width: 41.6666%; /* 5 / 12 */
+  }
+
+  #prednasky {
+    width: 58.3333%; /* 7 / 12 */
+  }
+
+  /* Убедись, что они не ведут себя как блоки по умолчанию */
+  #cviceni,
+  #allLectures {
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .new {
+    flex-direction: column;
+  }
+
+  #cviceni,
+  #prednasky,
+  #allLectures {
+    width: 100%;
+  }
+}
+
+/*#prednasky {
+  max-width: max-content;
+}*/
 #lectures {
-  margin: 0;
   font-size: 18px;
+}
+
+#lectures {
+  padding: 2%;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .lecture {
@@ -131,7 +203,7 @@ h2 {
 }
 
 #vysledky table {
-  margin-left: 80px;
+  margin-left: 2%;
 }
 p {
   justify-content: center;
@@ -141,18 +213,17 @@ p {
   color: #656565;
 }
 
+#vysledky h2 {
+  padding-left: 2%;
+}
+
 table {
   margin: 20px 0;
-  width: 80%;
-  border: 5px solid #000;
+  width: 95%;
 }
 
 th {
   border: 3px dotted #b15e23;
-}
-
-td {
-  border-bottom: 3px solid black;
 }
 
 th,
@@ -165,19 +236,23 @@ thead th {
 }
 
 #cviceni {
-  margin-top: 5px;
-  background-color: #f1f1f1;
-  padding-top: 35px;
-  padding-right: 200px;
-  padding-left: 10px;
+  background-image: linear-gradient(to right, rgb(213, 211, 211), white);
+  /*max-width: max-content;*/
+  padding-left: 2%;
   font-size: 15px;
   font-weight: bold;
+  padding: 2%;
+  margin: 0 auto;
+  justify-content: center;
+  padding-top: 35px;
 }
 .news {
   display: grid;
   grid-template-columns: 60px 1fr;
   gap: 0;
   border-bottom: 2px dotted #d5a17c;
+  margin-bottom: 5%;
+  margin-top: 2%;
   align-items: center;
 }
 #cviceni p {
@@ -186,6 +261,10 @@ thead th {
   margin: 0;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+#cviceni a {
+  color: #3c1f0a;
 }
 
 #kontakt {
@@ -201,8 +280,7 @@ thead th {
   padding-top: 20px;
 }
 dl {
-  display: flex;
-  flex-wrap: wrap;
+  min-width: 220px;
   margin: 10px 0;
   font-size: 15px;
 }
@@ -226,7 +304,7 @@ dd {
   color: white;
   margin: 0;
   padding: 0;
-  padding-top: 10px;
+  padding-top: 9.2%;
 }
 
 h2#subjects + ul {
@@ -242,7 +320,7 @@ h2#subjects + ul li::before {
 
 a {
   text-decoration: none;
-  color: #d5a17c;
+  color: #b15e23;
 }
 
 a:hover {
@@ -252,9 +330,15 @@ a:hover {
 
 #table {
   display: grid;
-  place-items: center;
-  grid-template-columns: 230px 1fr;
+  align-items: start; /* по вертикали */
+  justify-items: start;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 5px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 2%;
+}
+
+@media (max-width: 768px) {
+  #table {
+    grid-template-columns: 1fr; /* один столбец */
+  }
 }
