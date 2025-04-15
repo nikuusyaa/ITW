@@ -1,0 +1,145 @@
+/* Основные стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Герой-секция с фоном */
+.hero {
+  height: 100vh;
+  background-image: url("background-image.jpg"); /* Подставь своё изображение */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.scroll-down {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 10px 20px;
+  margin-top: 30px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Стили для секции "Обо мне" */
+.about {
+  padding: 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2rem;
+}
+
+/* Футер */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #3c1f0a;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+footer {
+  background-color: #3c1f0a;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Стиль для разделов */
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+h1,
+h2 {
+  color: #b15e23;
+}
+
+/* Стиль для изображения в "Обо мне" */
+.about img {
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+/* Стиль для проектов */
+.projects .project {
+  margin-bottom: 20px;
+}
+
+.projects .project h2 {
+  color: #3c1f0a;
+}
+
+.projects a {
+  text-decoration: none;
+  color: #b15e23;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
