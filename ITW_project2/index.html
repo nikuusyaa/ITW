@@ -4,18 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About me</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const heroSection = document.querySelector(".hero");
+        heroSection.classList.add("loaded");
+      });
+    </script>
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <section class="hero">
       <div class="content">
-        <h1>
-          Hello <3
-          <br />
-          <span>Front-End Developer & Designer</span>
-          <br />
-          <span>Veronika Borozenets</span>
-        </h1>
+        <h1>Hello <3</h1>
+        <div>Front-End Developer & Web Design</div>
+        <div>Veronika Borozenets</div>
         <a href="#about" class="scroll-down">↓</a>
       </div>
     </section>

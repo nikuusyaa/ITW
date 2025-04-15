@@ -1,4 +1,4 @@
-/* Основные стили */
+/* Main styles */
 * {
   margin: 0;
   padding: 0;
@@ -11,31 +11,54 @@ body {
   color: #333;
 }
 
-/* Герой-секция с фоном */
+/***************************************** Hero section styling *****************************************/
 .hero {
-  height: 100vh;
-  background-image: url("background-image.jpg"); /* Подставь своё изображение */
-  background-size: cover;
+  height: 95vh;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
+  /*Add image to the background*/
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("images/image3.jpg") no-repeat center center/cover;
+
+  transition: background 0.5s ease;
+}
+
+/*Add on hover*/
+.hero:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/image3.jpg") no-repeat center center/cover;
 }
 
 .hero h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
+  font-size: 6rem;
 }
 
-.hero h1 span {
-  font-size: 1.5rem;
-  font-weight: 300;
+/* For all divs inside .content besides first (h1) */
+.hero .content > div {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+/* animation delay */
+/* first div  */
+.hero .content > div:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+/* second div */
+.hero .content > div:nth-of-type(2) {
+  animation-delay: 1.5s;
 }
 
 .scroll-down {
   font-size: 2rem;
+  font-weight: bold;
   color: white;
   text-decoration: none;
   border: 2px solid white;
@@ -45,7 +68,18 @@ body {
   display: inline-block;
 }
 
-/* Стили для секции "Обо мне" */
+/* Animations*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/***************************************** About me section styling  ****************************************/
 .about {
   padding: 40px;
   background-color: #fff;
@@ -113,11 +147,6 @@ section {
   margin: 20px;
   background-color: white;
   border-radius: 5px;
-}
-
-h1,
-h2 {
-  color: #b15e23;
 }
 
 /* Стиль для изображения в "Обо мне" */
