@@ -175,19 +175,19 @@ header {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px 0;
   text-align: center;
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  z-index: 1000; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   margin-top: 2%;
 }
 
 header nav ul {
   list-style: none;
-  display: flex; 
-  justify-content: space-between; 
-  padding: 0 2%; 
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2%;
   margin: 0;
 }
 
@@ -200,4 +200,11 @@ header nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+/* Add on hover effect */
+header nav ul li a:hover {
+  text-shadow: 0 0 10px rgb(255, 196, 0), 0 0 20px rgb(255, 196, 0),
+    0 0 30px rgb(255, 196, 0);
 }
