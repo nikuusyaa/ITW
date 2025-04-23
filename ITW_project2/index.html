@@ -9,6 +9,18 @@
         const heroSection = document.querySelector(".hero");
         heroSection.classList.add("loaded");
       });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            card.classList.add("rotated"); // Добавляем класс для поворота
+          });
+
+          // Не добавляем обработчик для mouseleave, чтобы состояние оставалось
+        });
+      });
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,12 +55,24 @@
     <section id="about" class="about">
       <h2>About me</h2>
       <p>Information about me</p>
+
+      <!-- Контейнер для карточек -->
+      <div class="cards-container">
+        <div class="card">
+          <h3>Card 1</h3>
+          <p>Description for card 1</p>
+        </div>
+        <div class="card">
+          <h3>Card 2</h3>
+          <p>Description for card 2</p>
+        </div>
+        <div class="card">
+          <h3>Card 3</h3>
+          <p>Description for card 3</p>
+        </div>
+      </div>
     </section>
 
-    <section class="about">
-      <h1>Hello! I am Veronika Borozenets.</h1>
-      <p>I am very mimi mimi</p>
-    </section>
     <footer>
       <p>&copy; 2025 By Veronika Borozenets</p>
     </footer>
