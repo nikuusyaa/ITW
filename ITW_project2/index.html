@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,10 +15,9 @@
 
         cards.forEach((card) => {
           card.addEventListener("mouseenter", function () {
-            card.classList.add("rotated"); // Добавляем класс для поворота
+            card.classList.add("rotated"); 
           });
 
-          // Не добавляем обработчик для mouseleave, чтобы состояние оставалось
         });
       });
     </script>
@@ -51,12 +50,9 @@
       </div>
     </section>
 
-    <!-- Это может быть раздел с информацией обо мне -->
     <section id="about" class="about">
       <h2>About me</h2>
       <p>Information about me</p>
-
-      <!-- Контейнер для карточек -->
       <div class="cards-container">
         <div class="card">
           <h3>Card 1</h3>
