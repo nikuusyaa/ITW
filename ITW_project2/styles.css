@@ -170,3 +170,34 @@ section {
   margin-top: 10px;
   display: inline-block;
 }
+/*Style header*/
+header {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px 0;
+  text-align: center;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 1000; 
+  margin-top: 2%;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex; 
+  justify-content: space-between; 
+  padding: 0 2%; 
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
