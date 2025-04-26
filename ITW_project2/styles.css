@@ -194,39 +194,3 @@ header nav ul li a {
   text-align: center;
 }
 
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: 40px auto 0;
-  padding: 0;
-}
-
-.card {
-  height: 400px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  transition: transform 1s ease-in-out;
-}
-
-.card h3 {
-  margin-bottom: 15px;
-  font-size: 1.5rem;
-}
-
-.card p {
-  font-size: 1.1rem;
-  color: #fff;
-}
-
-.card.rotated {
-  transform: rotateY(360deg);
-}
-
-.cards-container {
-  max-width: 1000px; /* Максимальная ширина контейнера */
-  margin: 0 auto;
-}

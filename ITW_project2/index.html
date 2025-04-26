@@ -9,17 +9,6 @@
         const heroSection = document.querySelector(".hero");
         heroSection.classList.add("loaded");
       });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const cards = document.querySelectorAll(".card");
-
-        cards.forEach((card) => {
-          card.addEventListener("mouseenter", function () {
-            card.classList.add("rotated"); 
-          });
-
-        });
-      });
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,21 +41,18 @@
 
     <section id="about" class="about">
       <h2>About me</h2>
-      <p>Information about me</p>
-      <div class="cards-container">
-        <div class="card">
-          <h3>Card 1</h3>
-          <p>Description for card 1</p>
-        </div>
-        <div class="card">
-          <h3>Card 2</h3>
-          <p>Description for card 2</p>
-        </div>
-        <div class="card">
-          <h3>Card 3</h3>
-          <p>Description for card 3</p>
-        </div>
-      </div>
+      <p>
+        <img src="./images/avatar.jpg" />
+        I’m Veronika, a passionate student with interest in web design and
+        front-end development. Currently, I’m pursuing my Bachelor’s degree at
+        the Faculty of Information Technology, Brno University of Technology
+        (BUT FIT). My journey began at the art school in my hometown, where I
+        honed my skills in art and design. Combining this creative foundation
+        with interest in IT sphere, I develop in crafting clean and responsive
+        websites. Beyond front-end development, I’m also eager to explore and
+        grow in other areas of IT—whether it’s back-end programming, database
+        design, or anything else.
+      </p>
     </section>
 
     <footer>
