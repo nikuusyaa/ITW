@@ -194,13 +194,19 @@ header nav ul li a {
   text-align: center;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 5%;
+  padding: 0% 8%;
 }
 
 .about img {
   width: 350px;
   height: auto;
   border-radius: 50%;
+  transition: transform 1s ease-in-out;
+}
+
+.about img:hover {
+  transform: rotateY(360deg); /* Rotate */
 }
 
 .about-text {
