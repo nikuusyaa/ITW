@@ -126,13 +126,6 @@ section {
   background-color: white;
 }
 
-/* Стиль для изображения в "Обо мне" */
-.about img {
-  width: 200px;
-  border-radius: 50%;
-  margin-top: 20px;
-}
-
 /* Стиль для проектов */
 .projects .project {
   margin-bottom: 20px;
@@ -206,24 +199,23 @@ header nav ul li a:hover {
   position: relative;
 }
 
-.about img {
+/* Style avatar image */
+.about #avatar {
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 20px;
   width: 350px;
   height: auto;
   border-radius: 50%;
   transition: transform 1s ease-in-out;
 }
 
-.about img:hover {
+.about #avatar:hover {
   transform: rotateY(360deg); /* Rotate */
 }
 
-.about-text {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
 .about p {
+  text-align: left;
   font-size: 1.5rem;
 }
 .about h2 {
@@ -232,6 +224,59 @@ header nav ul li a:hover {
 
 .about h2 span {
   color: #fbd236;
+}
+
+.about-me-text {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.row:nth-child(even) {
+  grid-template-columns: 1fr 40%;
+}
+.row:nth-child(even) p {
+  text-align: right;
+}
+
+.row:nth-child(even) img {
+  order: 2;
+  width: 70%;
+}
+
+.row img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.row p {
+  font-size: 1.2rem;
+}
+
+/* Screen < 768px */
+@media (max-width: 768px) {
+  .row,
+  .row:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .row:nth-child(even) img {
+    order: initial;
+  }
+
+  .row p {
+    margin-bottom: 20px;
+  }
 }
 
 /************************************* Style contact me button  in About section ******************************************/
