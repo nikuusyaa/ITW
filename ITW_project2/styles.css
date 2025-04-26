@@ -184,13 +184,38 @@ header nav ul li a {
   font-size: 1.2rem;
 }
 
-/************************************ Style cards in about section ***************************************/
+/************************************ Style about section ***************************************/
 .about {
   box-sizing: border-box;
-  width: 100%;
+  min-height: 90vh;
   padding: 40px;
   padding-top: 5%;
   background-color: #662244;
   text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
+.about img {
+  width: 350px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.about p {
+  font-size: 1.5rem;
+}
+.about h2 {
+  margin-top: 0;
+}
+
+.about h2 span {
+  color: #fbd236;
+}
