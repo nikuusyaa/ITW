@@ -20,8 +20,14 @@
             contactForm.style.display === ""
           ) {
             contactForm.style.display = "block"; // Show the form
+            setTimeout(function () {
+              contactForm.classList.add("show"); // Add class for animation
+            }, 10); 
           } else {
-            contactForm.style.display = "none"; // Hide the form
+            contactForm.classList.remove("show"); // Remove class for animation
+            setTimeout(function () {
+              contactForm.style.display = "none"; // Hide after animation
+            }, 500); 
           }
         });
       });
