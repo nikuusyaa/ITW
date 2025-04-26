@@ -257,6 +257,10 @@ header nav ul li a:hover {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.row img:hover {
+  transform: scale(1.05);
 }
 
 .row p {
