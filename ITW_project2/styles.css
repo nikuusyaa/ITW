@@ -228,29 +228,15 @@ header nav ul li a:hover {
 
 .about-me-text {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr; /* Две колонки */
+  grid-template-rows: auto auto; /* Два рядка */
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .row {
-  display: grid;
-  grid-template-columns: 40% 1fr;
-  align-items: center;
-  gap: 20px;
-}
-
-.row:nth-child(even) {
-  grid-template-columns: 1fr 40%;
-}
-.row:nth-child(even) p {
-  text-align: right;
-}
-
-.row:nth-child(even) img {
-  order: 2;
-  width: 70%;
+  display: contents; /* Используем содержимое как часть родительского грида */
 }
 
 .row img {
@@ -259,14 +245,42 @@ header nav ul li a:hover {
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
 }
+
 .row img:hover {
   transform: scale(1.05);
 }
 
 .row p {
   font-size: 1.2rem;
+  padding: 5px;
+  display: flex;
+  align-items: center;
 }
 
+/* first row */
+.about-me-text .row:first-child img {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.about-me-text .row:first-child p {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: left;
+}
+
+/* Second row */
+.about-me-text .row:nth-child(2) p {
+  grid-column: 1;
+  grid-row: 2;
+  text-align: right;
+}
+
+.about-me-text .row:nth-child(2) img {
+  grid-column: 2;
+  grid-row: 2;
+  width: 70%;
+}
 /* Screen < 768px */
 @media (max-width: 768px) {
   .row,
