@@ -232,3 +232,84 @@ header nav ul li a:hover {
 .about h2 span {
   color: #fbd236;
 }
+
+/************************************* Style contact me button  in About section ******************************************/
+.btn-59,
+.btn-59 * {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-59 {
+  max-width: 20%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 100%;
+}
+
+.btn-59 {
+  background: none;
+  color: #fbd236;
+  display: block;
+  padding: 1.5rem 4rem;
+  position: relative;
+  text-transform: uppercase;
+}
+.btn-59 span {
+  background: #fff;
+  border: 1px solid #fbd236;
+  border-radius: 100px;
+  display: grid;
+  inset: 0;
+  place-items: center;
+  position: absolute;
+}
+.btn-59:hover span {
+  -webkit-animation: button 1s;
+  animation: button 1s;
+}
+@-webkit-keyframes button {
+  0% {
+    transform: scaleX(1);
+  }
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes button {
+  0% {
+    transform: scaleX(1);
+  }
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
