@@ -187,7 +187,6 @@ header nav ul li a:hover {
 /************************************ Style about section ***************************************/
 .about {
   box-sizing: border-box;
-  min-height: 90vh;
   padding: 40px;
   padding-top: 5%;
   background-color: #662244;
@@ -302,6 +301,7 @@ header nav ul li a:hover {
 .btn-59 * {
   border: 0 solid;
   box-sizing: border-box;
+  margin-bottom: 5px;
 }
 .btn-59 {
   max-width: 20%;
