@@ -9,6 +9,22 @@
         const heroSection = document.querySelector(".hero");
         heroSection.classList.add("loaded");
       });
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactButton = document.querySelector(".btn-59");
+        const contactForm = document.getElementById("contact-form");
+
+        contactButton.addEventListener("click", function () {
+          // Check if the form is currently displayed
+          if (
+            contactForm.style.display === "none" ||
+            contactForm.style.display === ""
+          ) {
+            contactForm.style.display = "block"; // Show the form
+          } else {
+            contactForm.style.display = "none"; // Hide the form
+          }
+        });
+      });
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -59,7 +75,20 @@
           <span>Contact Me</span>
         </button>
 
-        <p></p>
+        <div id="contact-form" class="contact-form" style="display: none">
+          <form action="your-email-processing-script.php" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
       </div>
     </section>
 

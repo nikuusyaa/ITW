@@ -313,3 +313,34 @@ header nav ul li a:hover {
     transform: scaleX(1);
   }
 }
+/************************************* Style contact form in About section ******************************************/
+.contact-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  max-width: 400px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background-color: #fbd236;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #e2a02e;
+}
