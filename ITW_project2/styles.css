@@ -184,7 +184,7 @@ header nav ul li a:hover {
   text-shadow: 0 0 10px rgb(255, 196, 0), 0 0 20px rgb(255, 196, 0),
     0 0 30px rgb(255, 196, 0);
 }
-/************************************ Style about section ***************************************/
+/************************************ Style About section ***************************************/
 .about {
   box-sizing: border-box;
   padding: 40px;
@@ -218,24 +218,53 @@ header nav ul li a:hover {
   font-size: 1.5rem;
 }
 .about h2 {
-  margin-top: 0;
+  margin: 1%;
 }
 
 .about h2 span {
   color: #fbd236;
 }
+/*************** Style link in about section ******************/
+.about-me-text a {
+  color: #0066cc; /* Цвет ссылки */
+  text-decoration: none; /* Убирает подчёркивание */
+  font-weight: bold; /* Жирный шрифт */
+  transition: color 0.3s ease;
+}
+
+.about-me-text a:hover {
+  color: #004499; 
+  text-decoration: underline; 
+}
+
+.about-me-text p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.about-me-text a {
+  display: inline; 
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.about-me-text p a {
+  font-weight: normal; 
+}
 
 .about-me-text {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Две колонки */
-  grid-template-rows: auto auto; /* Два рядка */
+  grid-template-columns: 1fr 1fr; /* Two cols */
+  grid-template-rows: auto auto; /* Two rows */
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .row {
-  display: contents; /* Используем содержимое как часть родительского грида */
+  display: contents;
 }
 
 .row img {
@@ -252,7 +281,7 @@ header nav ul li a:hover {
 .row p {
   font-size: 1.2rem;
   padding: 5px;
-  display: flex;
+
   align-items: center;
 }
 
