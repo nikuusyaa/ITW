@@ -1,0 +1,123 @@
+/**********************Style Main page of the projects *******************************/
+.projectsMain {
+  height: 100vh;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+  /*Add image to the background*/
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("images/image2.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  margin: 0;
+}
+/*  Effect for div */
+.typewriter {
+  font-size: 2rem;
+  display: inline-block;
+  border-right: 3px solid white; /* Cursor */
+  padding-right: 5px; /* padding between text and cursor */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Typing effect*/
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 39%;
+  }
+}
+
+/* Blinking cursor effect*/
+@keyframes blink {
+  50% {
+    border-color: transparent; /* Прячем курсор */
+  }
+}
+
+/*Style searching icon*/
+.projectsMain .fa-magnifying-glass {
+  font-size: 5rem;
+  color: #662244;
+  margin-top: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.projectsMain .fa-magnifying-glass:hover {
+  color: #84345c;
+}
+/***************Style Projects section********************/
+
+.projects {
+  background-color: #62551c;
+  height: 100vh;
+}
+/*Slider styles*/
+.project-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.slide p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Arrows*/
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
