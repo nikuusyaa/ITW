@@ -14,19 +14,19 @@
   background-attachment: fixed;
   margin: 0;
 }
-/*  Effect for div */
+/* Эффект печатания для текста */
 .typewriter {
   font-size: 2rem;
   display: inline-block;
-  border-right: 3px solid white; /* Cursor */
-  padding-right: 5px; /* padding between text and cursor */
+  border-right: 3px solid white; /* Курсор */
+  padding-right: 5px; /* Отступ между текстом и курсором */
   white-space: nowrap;
   overflow: hidden;
   width: 0;
   animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
 }
 
-/* Typing effect*/
+/* Анимация для печатания */
 @keyframes typing {
   from {
     width: 0;
@@ -36,14 +36,14 @@
   }
 }
 
-/* Blinking cursor effect*/
+/* Эффект мигающего курсора */
 @keyframes blink {
   50% {
-    border-color: transparent; /* Прячем курсор */
+    border-color: transparent; /* Скрываем курсор */
   }
 }
 
-/*Style searching icon*/
+/* Стили для иконки поиска */
 .projectsMain .fa-magnifying-glass {
   font-size: 5rem;
   color: #662244;
@@ -51,8 +51,14 @@
   transition: color 0.3s ease-in-out;
 }
 
+/* Подсветка иконки при наведении */
 .projectsMain .fa-magnifying-glass:hover {
   color: #84345c;
+}
+
+/* Подсветка иконки после завершения анимации */
+.projectsMain .highlight {
+  color: #fbd236; /* Цвет подсветки */
 }
 /***************Style Projects section********************/
 
