@@ -330,7 +330,7 @@ a:hover {
 
 #table {
   display: grid;
-  align-items: start; /* по вертикали */
+  align-items: start; 
   justify-items: start;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5px;
@@ -339,7 +339,7 @@ a:hover {
 
 @media (max-width: 768px) {
   #table {
-    grid-template-columns: 1fr; /* один столбец */
+    grid-template-columns: 1fr; 
   }
 }
 
@@ -349,11 +349,10 @@ a:hover {
   border: none;
   color: white;
   cursor: pointer;
-  display: none; /* Скрыт по умолчанию */
+  display: none; 
   margin: 10px;
 }
 
-/* Стиль для меню */
 #list1 {
   background-color: #b15e23;
   padding: 10px;
@@ -392,15 +391,28 @@ a:hover {
 @media (max-width: 576px) {
   #list1 {
     display: none;
-    flex-direction: row;
+    flex-direction: column; /* Vertical menu */
   }
 
   #hamburger {
-    display: block; /* Show hamburger */
+    display: block; /* Show */
   }
 
-  /* When hamburger is active, show mwnu*/
   #hamburger.active + #list1 {
     display: block;
+  }
+
+  #list1 ul {
+    display: block;
+  }
+
+  #list1 ul li {
+    display: block;
+    width: 100%;
+  }
+
+  #list1 a {
+    padding: 15px 0; 
+    text-align: left; 
   }
 }
