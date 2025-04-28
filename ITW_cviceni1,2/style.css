@@ -330,7 +330,7 @@ a:hover {
 
 #table {
   display: grid;
-  align-items: start; 
+  align-items: start;
   justify-items: start;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5px;
@@ -339,7 +339,7 @@ a:hover {
 
 @media (max-width: 768px) {
   #table {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 }
 
@@ -349,7 +349,7 @@ a:hover {
   border: none;
   color: white;
   cursor: pointer;
-  display: none; 
+  display: none;
   margin: 10px;
 }
 
@@ -392,10 +392,19 @@ a:hover {
   #list1 {
     display: none;
     flex-direction: column; /* Vertical menu */
+    background-color: #b15e23;
   }
 
   #hamburger {
-    display: block; /* Show */
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 14%;
   }
 
   #hamburger.active + #list1 {
@@ -412,7 +421,7 @@ a:hover {
   }
 
   #list1 a {
-    padding: 15px 0; 
-    text-align: left; 
+    padding: 15px 0;
+    text-align: left;
   }
 }
