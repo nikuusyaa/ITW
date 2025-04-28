@@ -439,13 +439,14 @@ a:hover {
   }
 }
 
-/*Make list1 sticky*/
-#list1 {
-  position: sticky;
+#list1.fixed {
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   margin-top: 0;
-  padding-top: 1;
+  padding-top: 10px;
   padding-bottom: 0;
 }
 

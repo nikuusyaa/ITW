@@ -227,6 +227,7 @@
       </span>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script>
      
       document.getElementById('hamburger').addEventListener('click', function() {
@@ -234,51 +235,42 @@
         document.getElementById('list1').classList.toggle('active');
       });
 
-      
-  function smoothScrollTo(targetY, duration) {
-    const startY = window.pageYOffset;
-    const distance = targetY - startY;
-    const startTime = performance.now();
+   $(function() {
+    var $menu     = $('#list1'),
+        menuTop   = $menu.offset().top,
+        menuHeight;
 
-    // (easeInOutCubic)
-    function ease(t) {
-      return t < 0.5
-        ? 4 * t * t * t
-        : 1 - Math.pow(-2 * t + 2, 3) / 2;
-    }
-
-    function animate(currentTime) {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = ease(progress);
-
-      window.scrollTo(0, startY + distance * eased);
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
+    //  When scrolling add/remove fixed class
+    $(window).on('scroll', function() {
+      if ($(window).scrollTop() >= menuTop) {
+        if (!$menu.hasClass('fixed')) {
+          $menu.addClass('fixed');
+          // content should not jump to the top
+          menuHeight = $menu.outerHeight();
+          $('body').css('padding-top', menuHeight + 'px');
+        }
+      } else {
+        if ($menu.hasClass('fixed')) {
+          $menu.removeClass('fixed');
+          $('body').css('padding-top', '0');
+        }
       }
-    }
+    });
 
-    requestAnimationFrame(animate);
-  }
-
-  // for all buttons in list1
-  document.querySelectorAll('#list1 a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
+    // Smooth scrolling
+    $menu.find('a[href^="#"]').on('click', function(e) {
       e.preventDefault();
-      const targetId = link.getAttribute('href');
-      const targetEl = document.querySelector(targetId);
-      if (!targetEl) return;
+      var target = $($(this).attr('href'));
+      if (!target.length) return;
 
-      // height of the menu
-      const menuHeight = document.getElementById('list1').offsetHeight;
+      var targetY = target.offset().top
+                  - $menu.outerHeight(); 
 
-    
-      const targetY = targetEl.getBoundingClientRect().top
-                      + window.pageYOffset
-                      - menuHeight;
-
-      smoothScrollTo(targetY, 1000); // 1000ms
+      $('html, body').animate(
+        { scrollTop: targetY },
+        1000,            // 1000ms
+        'swing'          
+      );
     });
   });
     </script>
