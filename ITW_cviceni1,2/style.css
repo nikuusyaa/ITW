@@ -387,6 +387,7 @@ a:hover {
   }
   /* hide all elems of the list */
   #list1 ul li {
+    width: 100vw;
     display: none !important;
   }
   /* Always show the first element of the list */
