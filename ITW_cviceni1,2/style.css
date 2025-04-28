@@ -150,7 +150,6 @@ h2 {
     width: 58.3333%; /* 7 / 12 */
   }
 
-  /* Убедись, что они не ведут себя как блоки по умолчанию */
   #cviceni,
   #allLectures {
     box-sizing: border-box;
@@ -356,7 +355,7 @@ a:hover {
 #list1 {
   background-color: #b15e23;
   padding: 10px;
-  display: flex; /* Меню будет горизонтальным по умолчанию */
+  display: flex; 
 }
 
 #list1 ul {
@@ -423,5 +422,18 @@ a:hover {
   #list1 a {
     padding: 15px 0;
     text-align: left;
+  }
+}
+
+@media (max-width: 991px) {
+  #list1 ul {
+    gap: 30px; 
+  }
+  #list1 a span {
+    display: none; 
+  }
+
+  #list1 li:first-child a span {
+    display: inline-block; 
   }
 }
