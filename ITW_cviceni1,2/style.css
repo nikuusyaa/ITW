@@ -439,6 +439,16 @@ a:hover {
   }
 }
 
+/*Make list1 sticky*/
+#list1 {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-top: 0;
+  padding-top: 1;
+  padding-bottom: 0;
+}
+
 @media (max-width: 991px) {
   #list1 ul {
     gap: 30px;
