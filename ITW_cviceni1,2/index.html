@@ -12,16 +12,16 @@
     <div id="head">
 
       <h1 ><a href="#">ITW</a> <span id="subtitle"> Tvorba webových stránek</span></h1>
+      <button id="hamburger" class="hamburger">&#9776;</button>
       <div id="list1">
-
        <ul>
-  <li><a href="#ITW">ITW <i class="fa-solid fa-house"></i></a></li>
-  <li><a href="#lectures"> Přednášky <i class="fa-solid fa-tv"></i></a></li>
-  <li><a href="#results">Přehled výsledků <i class="fa-solid fa-face-grin-beam-sweat"></i></a></li>
-  <li><a href="#excersises">Cvičení <i class="fa-solid fa-hammer"></i></a></li>
-  <li><a href="#us">Kontaktujte nás <i class="fa-solid fa-envelope"></i></a></li>
-  <li><a href="#subjects">Související předměty <i class="fa-solid fa-circle-info"></i></a></li>
-</ul>
+        <li><a href="#ITW">ITW <i class="fa-solid fa-house"></i></a></li>
+        <li><a href="#lectures"> Přednášky <i class="fa-solid fa-tv"></i></a></li>
+        <li><a href="#results">Přehled výsledků <i class="fa-solid fa-face-grin-beam-sweat"></i></a></li>
+        <li><a href="#excersises">Cvičení <i class="fa-solid fa-hammer"></i></a></li>
+        <li><a href="#us">Kontaktujte nás <i class="fa-solid fa-envelope"></i></a></li>
+        <li><a href="#subjects">Související předměty <i class="fa-solid fa-circle-info"></i></a></li>
+      </ul>
       </div>
     </div>
     <div id ="about">
@@ -227,6 +227,13 @@
       </span>
     </div>
   </div>
+   <script>
+     
+      document.getElementById('hamburger').addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.getElementById('list1').classList.toggle('active');
+      });
+    </script>
 </body>
 </html>
 
