@@ -338,7 +338,7 @@ a:hover {
   color: white;
   cursor: pointer;
   display: none;
-  margin: 10px;
+  margin-left: 0 auto;
 }
 
 #list1 {
@@ -366,51 +366,75 @@ a:hover {
   background-color: #3c1f0a;
 }
 
-/* hide menu for xs screen */
-#list1.menu {
-  display: none;
-}
-
-/* Show menu */
-#list1.active {
-  display: block;
-}
-
+/*For screen <576px*/
 @media (max-width: 576px) {
+  #list1 ul li:first-child a span {
+    display: inline-block !important;
+  }
   #list1 {
-    display: none;
-    flex-direction: column; /* Vertical menu */
+    position: relative;
+    display: flex !important;
+    align-items: center;
     background-color: #b15e23;
-  }
-
-  #hamburger {
-    display: block;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    top: 14%;
-  }
-
-  #hamburger.active + #list1 {
-    display: block;
+    padding: 0;
   }
 
   #list1 ul {
-    display: block;
+    display: flex !important;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
-
+  /* hide all elems of the list */
   #list1 ul li {
-    display: block;
-    width: 100%;
+    display: none !important;
+  }
+  /* Always show the first element of the list */
+  #list1 ul li:first-child {
+    display: block !important;
   }
 
-  #list1 a {
-    padding: 15px 0;
+  #hamburger {
+    display: block !important;
+    margin-left: 0 auto;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  #list1.active ul {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  #list1.active ul li {
+    display: block !important;
+    width: 100%;
+    padding: 0;
     text-align: left;
+  }
+  #list1.active ul li a span {
+    display: inline-block !important;
+  }
+
+  #list1 ul li:first-child {
+    display: flex !important;
+    align-items: center;
+
+    justify-content: space-between;
+  }
+
+  #list1 ul li:first-child a {
+    display: inline-flex !important;
+    align-items: center;
+    min-width: 0 !important;
+    flex: 1;
+  }
+
+  #list1 ul li:first-child a span {
+    display: inline-block !important;
   }
 }
 
