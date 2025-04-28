@@ -233,6 +233,54 @@
         this.classList.toggle('active');
         document.getElementById('list1').classList.toggle('active');
       });
+
+      
+  function smoothScrollTo(targetY, duration) {
+    const startY = window.pageYOffset;
+    const distance = targetY - startY;
+    const startTime = performance.now();
+
+    // (easeInOutCubic)
+    function ease(t) {
+      return t < 0.5
+        ? 4 * t * t * t
+        : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function animate(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = ease(progress);
+
+      window.scrollTo(0, startY + distance * eased);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  // for all buttons in list1
+  document.querySelectorAll('#list1 a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href');
+      const targetEl = document.querySelector(targetId);
+      if (!targetEl) return;
+
+      // height of the menu
+      const menuHeight = document.getElementById('list1').offsetHeight;
+
+    
+      const targetY = targetEl.getBoundingClientRect().top
+                      + window.pageYOffset
+                      - menuHeight;
+
+      smoothScrollTo(targetY, 1000); // 1000ms
+    });
+  });
     </script>
 </body>
 </html>
