@@ -69,17 +69,6 @@ body {
   color: #d5a17c;
 }
 
-#head ul li a:hover::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 30%;
-  bottom: -85%;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #d5a17c;
-}
-
 #list1 a:hover {
   background-color: #3c1f0a;
 }
@@ -355,7 +344,7 @@ a:hover {
 #list1 {
   background-color: #b15e23;
   padding: 10px;
-  display: flex; 
+  display: flex;
 }
 
 #list1 ul {
@@ -427,13 +416,46 @@ a:hover {
 
 @media (max-width: 991px) {
   #list1 ul {
-    gap: 30px; 
+    gap: 30px;
   }
   #list1 a span {
-    display: none; 
+    display: none;
   }
 
   #list1 li:first-child a span {
-    display: inline-block; 
+    display: inline-block;
+  }
+
+  /*Add pseudo elements on hover*/
+  #list1 li:nth-child(2) a:hover::after {
+    visibility: visible;
+    opacity: 1;
+  }
+  #list1 li:nth-child(2) a::after {
+    content: "Přednášky";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3c1f0a;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+@media (min-width: 992px) {
+  #head ul li a:hover::after {
+    content: "";
+    position: absolute;
+    left: 30%;
+    bottom: -85%;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #d5a17c;
   }
 }
