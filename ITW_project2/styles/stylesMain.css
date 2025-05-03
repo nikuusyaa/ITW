@@ -26,7 +26,7 @@ body {
   margin-bottom: 0;
   /*Add image to the background*/
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("images/image3.jpg") no-repeat center center/cover;
+    url("../images/image3.jpg") no-repeat center center/cover;
   background-attachment: fixed;
   margin: 0;
 }
