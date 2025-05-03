@@ -544,3 +544,50 @@ footer p {
     margin: 10px 0;
   }
 }
+/******************* Tooltip for smaller screens ****************/
+header nav ul li a {
+  position: relative;
+  display: inline-block;
+}
+
+/* Тултип */
+header nav ul li a::after {
+  content: attr(data-tooltip); 
+  position: absolute;
+  top: 50%;
+  left: 120%;
+  transform: translateY(-50%);
+  background-color: #ff7bb2;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5%;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1002;
+}
+
+/* Show tooltip*/
+header nav ul li a:hover::after {
+  opacity: 1;
+}
+
+/* Tooltip shows only when the text is hidden */
+@media screen and (max-width: 992px) {
+  .nav-text {
+    display: none;
+  }
+
+  header nav ul li a::after {
+    display: block;
+  }
+}
+
+/*Hide tooltip on big screens*/
+@media screen and (min-width: 993px) {
+  header nav ul li a::after {
+    display: none;
+  }
+}
