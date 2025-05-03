@@ -159,6 +159,11 @@
 }
 /***************Style Projects section********************/
 
+#projects .heading {
+  color: #f4448d;
+  margin: 0 auto;
+  text-align: center;
+}
 #projects {
   background-color: #62551c;
   margin: 0;
