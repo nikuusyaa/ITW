@@ -306,7 +306,6 @@ header nav ul li a:hover {
 .about-me-text .row:nth-child(2) img {
   grid-column: 2;
   grid-row: 2;
-  width: 70%;
 }
 /* Screen < 768px */
 @media (max-width: 768px) {
@@ -404,6 +403,9 @@ header nav ul li a:hover {
   to {
     transform: scaleX(1);
   }
+}
+.btn-59 {
+  margin: 0 auto;
 }
 /************************************* Style contact form in About section ******************************************/
 .contact-form {
@@ -550,9 +552,8 @@ header nav ul li a {
   display: inline-block;
 }
 
-/* Тултип */
 header nav ul li a::after {
-  content: attr(data-tooltip); 
+  content: attr(data-tooltip);
   position: absolute;
   top: 50%;
   left: 120%;
@@ -589,5 +590,89 @@ header nav ul li a:hover::after {
 @media screen and (min-width: 993px) {
   header nav ul li a::after {
     display: none;
+  }
+}
+/******************* Smaller screens *******************/
+
+/*Small screens*/
+@media screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .about #avatar {
+    width: 50%;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  .about-me-text {
+    display: block;
+  }
+
+  .about-me-text .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .about-me-text .row img {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+
+  .contact-form {
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+  }
+  .btn-59 {
+    margin: 20px auto;
+  }
+}
+
+/*Medium screens*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .about #avatar {
+    width: 250px;
+    margin-bottom: 30px;
+  }
+
+  .about-me-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  .about-me-text .row {
+    display: contents;
+  }
+
+  .about-me-text .row img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .about-me-text .row p {
+    font-size: 1.1rem;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .btn-59 {
+    margin-top: 40px;
   }
 }
