@@ -59,7 +59,7 @@
     width: 0;
   }
   to {
-    width: 32%;
+    width: 45%;
   }
 }
 
@@ -68,22 +68,6 @@
   50% {
     border-color: transparent; /* Hide cursor */
   }
-}
-
-.projectsMain .fa-magnifying-glass {
-  font-size: 5rem;
-  color: #fd5a9d;
-  position: absolute;
-  right: 28.4%;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: color 0.3s ease-in-out;
-  z-index: 1000;
-}
-
-/*********on hover effects*********/
-.projectsMain .fa-magnifying-glass:hover {
-  color: #fd5a9d;
 }
 
 /* highlight icon after animation is finished */
@@ -304,4 +288,13 @@
 
 #projects h3:hover {
   text-shadow: 0px 0px 8px #ffffff;
+}
+
+/**************Footer****************/
+footer {
+  width: 100vw;
+  background-color: #62551c;
+  color: #62551c;
+  padding: 10px;
+  text-align: center;
 }
