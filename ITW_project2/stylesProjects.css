@@ -298,3 +298,83 @@ footer {
   padding: 10px;
   text-align: center;
 }
+
+/******************For smaller screens****************/
+
+@media screen and (max-width: 980px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 55%;
+    }
+  }
+  .typewriter {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 792px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 75%;
+    }
+  }
+  .typewriter {
+    font-size: 1.4rem;
+  }
+  #projects .section-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  #projects .section-item img {
+    float: none;
+    width: 60%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  #projects .section-item:nth-child(1) img {
+    width: 70%;
+  }
+
+  #projects .section-item p,
+  #projects .section-item h3,
+  #projects .section-item ul {
+    text-align: center;
+  }
+
+  .references {
+    float: none;
+    width: auto;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .section-item:nth-child(2) img {
+    float: none;
+  }
+
+  .section-item:nth-child(2) .references {
+    float: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  .typewriter {
+    font-size: 1.4rem;
+  }
+}
