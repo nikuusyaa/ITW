@@ -13,6 +13,9 @@
           searchIcon.classList.add("highlight");
         });
       });
+       function toggleMenu() {
+    document.querySelector('.nav-list').classList.toggle('show');
+  }
     </script>
     <link
       rel="stylesheet"
@@ -30,15 +33,33 @@
     <link rel="stylesheet" href="stylesProjects.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">About me</a></li>
-          <li><a href="education.html">Education and experience</a></li>
-          <li><a href="projects.html">My projects</a></li>
-        </ul>
-      </nav>
-    </header>
+<header>
+  <nav>
+    <!-- Hamburger menu icon (mobile) -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-list">
+      <li>
+        <a href="index.html">
+          <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
+          <span class="nav-text">About me</span>
+        </a>
+      </li>
+      <li>
+        <a href="education.html">
+          <span class="nav-icon"><i class="fa-solid fa-school"></i></span>
+          <span class="nav-text">Education</span>
+        </a>
+      </li>
+      <li>
+        <a href="projects.html">
+          <span class="nav-icon"><i class="fa-solid fa-laptop"></i></span>
+          <span class="nav-text">Projects</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
     <section class="projectsMain" id="projectsMain">
       <div class="typewriter">Check out my projects</div>
     </section>

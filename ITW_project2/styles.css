@@ -481,3 +481,66 @@ footer p {
 .social-icons a:hover {
   color: #fbd236;
 }
+
+/*****************Different screens **************************/
+/* Hide hamburger by default */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+/* Default nav-list */
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Icons hidden by default on large screens */
+.nav-icon {
+  display: none;
+}
+
+.nav-text {
+  display: inline;
+}
+
+/* Medium screens: show icons, hide text */
+@media screen and (max-width: 992px) {
+  .nav-icon {
+    display: inline;
+  }
+  .nav-text {
+    display: none;
+  }
+}
+
+/* Small screens: show hamburger, hide full nav */
+@media screen and (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .nav-list li {
+    margin: 10px 0;
+  }
+}
