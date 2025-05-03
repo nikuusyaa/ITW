@@ -94,7 +94,7 @@ body {
   font-size: 1.2rem;
 }
 
-/* Футер */
+/* Footer */
 footer {
   background-color: #333;
   color: white;
@@ -107,40 +107,13 @@ body {
   background-color: #f4f4f4;
 }
 
-footer {
-  background-color: #3c1f0a;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-}
-
-footer p {
-  font-size: 1rem;
-}
-
-/* Стиль для разделов */
+/* Section */
 section {
   padding: 20px;
   margin: 20px;
   background-color: white;
 }
 
-/* Стиль для проектов */
-.projects .project {
-  margin-bottom: 20px;
-}
-
-.projects .project h2 {
-  color: #3c1f0a;
-}
-
-.projects a {
-  text-decoration: none;
-  color: #b15e23;
-  font-weight: bold;
-  margin-top: 10px;
-  display: inline-block;
-}
 /************************************ Style header ***********************************/
 header {
   background: linear-gradient(
@@ -225,9 +198,9 @@ header nav ul li a:hover {
 }
 /*************** Style link in about section ******************/
 .about-me-text a {
-  color: #0066cc; /* Цвет ссылки */
-  text-decoration: none; /* Убирает подчёркивание */
-  font-weight: bold; /* Жирный шрифт */
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
@@ -421,7 +394,7 @@ header nav ul li a:hover {
   transform: translate(-50%, 100%);
   transition: transform 0.5s ease-in-out; /* Animation */
   z-index: 1000;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8), 0 0 55px rgba(0, 0, 0, 0.8); /* Улучшенная тень */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8), 0 0 55px rgba(0, 0, 0, 0.8);
 }
 
 .contact-form.show {
