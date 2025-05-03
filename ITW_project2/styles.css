@@ -457,7 +457,7 @@ footer p {
   color: #fbd236;
 }
 
-/*****************Different screens **************************/
+/******************** Hamburger and Navigation List **************************/
 /* Hide hamburger by default */
 .hamburger {
   display: none;
@@ -482,6 +482,7 @@ footer p {
 .nav-text {
   display: inline;
 }
+/*******************************Different screens **************************/
 
 /* Medium screens: show icons, hide text */
 @media screen and (max-width: 992px) {
