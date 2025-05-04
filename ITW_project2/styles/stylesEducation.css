@@ -26,14 +26,13 @@
   margin-top: 20px;
 }
 /********************************** Animation for first page ***************************/
-/* animation delay */
-/* first div  */
 .education .content > div {
   opacity: 0;
   animation: scaleIn 1s ease forwards;
   font-size: 3rem;
   margin-top: 20px;
 }
+/* animation delay */
 .education .content > div:nth-of-type(1) {
   animation-delay: 0.5s;
 }
@@ -134,7 +133,7 @@ footer {
   color: #ffff45;
 }
 
-/*************** Style knowledge *****************/
+/*************************** Style knowledge in slider *****************************/
 #knowledge h2 {
   font-size: 2rem;
 }

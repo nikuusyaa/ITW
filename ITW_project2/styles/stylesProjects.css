@@ -85,6 +85,7 @@ body {
   color: #f4448d;
   margin: 0 auto;
   text-align: center;
+  font-size: 1.5rem;
 }
 #projects {
   background-color: #62551c;
@@ -115,7 +116,7 @@ section {
 
 #projects .section-item:nth-child(1),
 #projects .section-item:nth-child(2) {
-  border-bottom: 1.5px dotted #fd5a9d;
+  border-bottom: 1.5px solid #fd5a9d;
 }
 #projects .section-item img {
   float: left;
