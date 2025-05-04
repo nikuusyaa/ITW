@@ -280,21 +280,6 @@ header nav ul li a:hover {
   grid-column: 2;
   grid-row: 2;
 }
-/* Screen < 768px */
-@media (max-width: 768px) {
-  .row,
-  .row:nth-child(even) {
-    grid-template-columns: 1fr;
-  }
-
-  .row:nth-child(even) img {
-    order: initial;
-  }
-
-  .row p {
-    margin-bottom: 20px;
-  }
-}
 
 /************************************* Style contact me button  in About section ******************************************/
 .btn-59,
@@ -570,6 +555,19 @@ header nav ul li a:hover::after {
 
 /*Small screens*/
 @media screen and (max-width: 768px) {
+  .row,
+  .row:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .row:nth-child(even) img {
+    order: initial;
+  }
+
+  .row p {
+    margin-bottom: 20px;
+  }
+
   .about {
     flex-direction: column;
     padding: 20px;
@@ -650,7 +648,7 @@ header nav ul li a:hover::after {
     margin-top: 40px;
   }
 
-  /* Общие стили тултипа */
+  /* Tooltip styling */
   header nav ul li a::after {
     top: 120%;
     transform: none;

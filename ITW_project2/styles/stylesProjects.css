@@ -78,74 +78,8 @@ body {
 .projectsMain .highlight {
   color: #bba231;
 }
-/***************Style Projects section********************/
 
-.projects {
-  background-color: #62551c;
-  height: 100vh;
-}
-/*Slider styles*/
-.project-slider {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.slider-container {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.slide p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: #333;
-}
-
-/* Arrows*/
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: 2rem;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-/***************Style Projects section********************/
+/************************************ Style Projects section **********************************/
 
 #projects .heading {
   color: #f4448d;
@@ -295,7 +229,7 @@ section {
   text-shadow: 0px 0px 8px #ffffff;
 }
 
-/**************Footer****************/
+/************** Footer ****************/
 footer {
   width: 100vw;
   background-color: #62551c;
@@ -316,7 +250,7 @@ footer {
   color: #ff7bb2;
 }
 
-/******************For smaller screens****************/
+/****************** For smaller screens ****************/
 
 @media screen and (max-width: 980px) {
   @keyframes typing {
