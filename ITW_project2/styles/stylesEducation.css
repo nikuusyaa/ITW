@@ -60,9 +60,9 @@
   background: #082d59;
   color: white;
   margin: 0;
-  padding: 50px 20px;
+  padding: 5%;
   text-align: center;
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .slider-container {
