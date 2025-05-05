@@ -138,14 +138,6 @@ footer {
   display: flex;
   justify-content: center;
 }
-.social-icons {
-  display: flex;
-  justify-content: center;
-}
-
-.social-icons a:hover {
-  color: #ffff45;
-}
 
 /*************************** Style Skills in slider *****************************/
 #knowledge h2 {
@@ -229,13 +221,21 @@ footer {
 }
 
 /***************************** Icons styling **************************/
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a:hover {
+  color: #ffff45;
+}
 .skill .label {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.skill-icon {
+.skill .label .skill-icon {
   color: #ffff45;
   background-color: #082d59;
   padding: 10px;
@@ -250,23 +250,17 @@ footer {
   gap: 0px;
   padding: 2% 4%;
   padding-bottom: 0;
-  justify-items: center; /* выравнивание карточек по центру */
+  justify-items: center;
 }
 
 .card {
   width: 90%;
   height: 90%;
   background-color: white;
-  text-align: left;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   justify-content: center;
   transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
 }
 
 .card h3 {
@@ -274,26 +268,68 @@ footer {
   margin: 0 0 5px;
 }
 
-.card p {
-  font-size: 0.85rem;
-  color: #333;
-  margin: 0;
-  line-height: 1.2;
-}
-
 .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
 }
 
-.image-card {
-  padding: 0;
-  background: none;
-  box-shadow: none;
+.text-card {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
+  padding: 5%;
 }
 
+.text-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/*** align odd items to the left****/
+.text-card ul li:nth-child(odd) {
+  text-align: left;
+}
+/*** align even items to the right****/
+.text-card ul li:nth-child(even) {
+  text-align: right;
+}
+
+.text-card ul li {
+  padding: 2% 0%;
+  color: #082d59;
+  font-size: 1rem;
+}
+
+.text-card ul li a {
+  text-decoration: none;
+  color: black;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.text-card h3 {
+  color: #082d59;
+  background-color: #ffff45;
+  padding: 1%;
+}
+/**********Icons********/
+.fa-solid {
+  color: black;
+  transition: text-shadow 0.3s ease-in-out;
+}
+/************* Hover effects *************/
+.card:hover {
+  transform: translateY(-5px);
+}
+.text-card ul:hover li a,
+.text-card ul:hover .fa-solid {
+  text-shadow: 0 0 50px rgb(255, 255, 69), 0 0 10px rgb(255, 255, 69),
+    0 0 20px rgb(255, 255, 69);
+}
+
+/****************** Different screens **********************/
 @media (max-width: 900px) {
   .experience-grid {
     grid-template-columns: 1fr;
