@@ -300,6 +300,15 @@ footer {
   text-align: right;
 }
 
+/*** align odd items to the left****/
+.text-card .secondList li:nth-child(even) {
+  text-align: left;
+}
+/*** align even items to the right****/
+.text-card .secondList li:nth-child(odd) {
+  text-align: right;
+}
+
 .text-card ul li {
   padding: 2% 0%;
   color: #082d59;
