@@ -309,6 +309,15 @@ footer {
   text-align: right;
 }
 
+/*** align items to center****/
+.text-card .thirdList li:nth-child(even) {
+  text-align: center;
+}
+/*** align even items to the right****/
+.text-card .thirdList li:nth-child(odd) {
+  text-align: center;
+}
+
 .text-card ul li {
   padding: 2% 0%;
   color: #082d59;
