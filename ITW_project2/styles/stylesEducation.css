@@ -68,7 +68,7 @@
 .slider-container {
   position: relative;
   max-width: 100vw;
-  height: 100vh;
+
   margin: auto;
   overflow: hidden;
 }
@@ -355,13 +355,24 @@ footer {
 }
 
 /****************** Different screens **********************/
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .experience-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 45%);
+    row-gap: 20px;
+    column-gap: 10px;
+    justify-content: center;
   }
 
   .card {
-    width: 90vw;
-    height: 90vw;
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    column-gap: 10px;
+    justify-content: center;
   }
 }
