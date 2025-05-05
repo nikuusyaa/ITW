@@ -260,7 +260,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: transform 0.3s ease;
+  border-radius: 15px;
+  transition: border-radius 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .card h3 {
@@ -269,9 +270,11 @@ footer {
 }
 
 .card img {
+  border-radius: 15px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: border-radius 0.3s ease-in-out;
 }
 
 .text-card {
@@ -322,11 +325,15 @@ footer {
 /************* Hover effects *************/
 .card:hover {
   transform: translateY(-5px);
+  border-radius: 0px;
 }
 .text-card ul:hover li a,
 .text-card ul:hover .fa-solid {
   text-shadow: 0 0 50px rgb(255, 255, 69), 0 0 10px rgb(255, 255, 69),
     0 0 20px rgb(255, 255, 69);
+}
+.card img:hover {
+  border-radius: 0;
 }
 
 /****************** Different screens **********************/
